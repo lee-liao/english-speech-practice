@@ -1,0 +1,23 @@
+ {
+    "id": "transition",
+    "title": "衔接过渡",
+    "description": "自然切换话题、衔接观点的转场句",
+    "questions": [
+      {
+        "chinese": "说到这个",
+        "english": "Speaking of which..."
+      },
+      {
+        "chinese": "接着你刚才说的",
+        "english": "Building on what you just said..."
+      },
+      {
+        "chinese": "相关地说一下",
+        "english": "On a related note..."
+      },
+      {
+        "chinese": "暂时换个话题",
+        "english": "Shifting gears for a moment..."
+      }
+    ]
+  }

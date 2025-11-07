@@ -1,0 +1,1849 @@
+<!DOCTYPE html>
+<!-- saved from url=(0197)https://agent.doubao.com.cn/obj/eden-cn/upnbsw-tss/ljhwZthlaukjlkulzlp/super_doubao/27855882753357826/2647eece4a422f3df863b3de2fa71ccc/WebsiteDeploy/english_meeting_practice_final_original_fix.html -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语用语练习</title>
+    
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#f59e0b',
+                        success: '#10b981',
+                        warning: '#f59e0b',
+                        danger: '#ef4444',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .glass-effect {
+                backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }
+            .hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            }
+            .fade-in {
+                animation: fadeIn 0.5s ease-in;
+            }
+            .slide-up {
+                animation: slideUp 0.6s ease-out;
+            }
+            .pulse-animation {
+                animation: pulse 2s infinite;
+            }
+            .recording-pulse {
+                animation: recordingPulse 1.5s infinite;
+            }
+            .timer-bar {
+                height: 4px;
+                background: #e2e8f0;
+                border-radius: 2px;
+                overflow: hidden;
+                margin: 1rem 0;
+            }
+            .timer-fill {
+                height: 100%;
+                background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+                border-radius: 2px;
+                transition: width 1s linear;
+                width: 100%;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes recordingPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        
+        .meeting-scene {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .meeting-room {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .prompt-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .answer-input {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .answer-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            outline: none;
+        }
+        
+        .feedback-correct {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .feedback-incorrect {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .scene-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .scene-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .scene-button.active {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .sentence-example {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 0.5rem 0;
+        }
+        
+        .next-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .next-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .voice-button {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+        }
+        
+        .voice-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(239, 68, 68, 0.4);
+        }
+        
+        .voice-button.recording {
+            animation: recordingPulse 1.5s infinite;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+        
+        .voice-status {
+            text-align: center;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: #6b7280;
+        }
+        
+        .recognized-text {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #e5e7eb;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .voice-instructions {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #0c4a6e;
+        }
+        
+        .permission-request {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #92400e;
+            text-align: center;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #991b1b;
+            text-align: center;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .action-button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .primary-button {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+        }
+        
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .secondary-button {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+            color: white;
+        }
+        
+        .secondary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(107, 114, 128, 0.3);
+        }
+        
+        .stop-button {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+        
+        .stop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+        }
+        
+        .recognition-info {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-align: center;
+        }
+        
+        .recording-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .timer-display {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ef4444;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-3{margin-left:0.75rem}.mr-2{margin-right:0.5rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.w-32{width:8rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-6xl{max-width:72rem}.flex-shrink-0{flex-shrink:0}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.rounded-lg{border-radius:0.5rem}.border-l-4{border-left-width:4px}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-8{padding:2rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.text-center{text-align:center}.font-inter{font-family:Inter, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-6xl{font-size:3.75rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-accent{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-success{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-yellow-400{--tw-text-opacity:1;color:rgb(250 204 21 / var(--tw-text-opacity, 1))}.text-yellow-700{--tw-text-opacity:1;color:rgb(161 98 7 / var(--tw-text-opacity, 1))}.opacity-90{opacity:0.9}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.glass-effect {
+                -webkit-backdrop-filter: blur(10px);
+                        backdrop-filter: blur(10px);
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+            }.hover-lift {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }.hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            }.slide-up {
+                animation: slideUp 0.6s ease-out;
+            }.timer-bar {
+                height: 4px;
+                background: #e2e8f0;
+                border-radius: 2px;
+                overflow: hidden;
+                margin: 1rem 0;
+            }.timer-fill {
+                height: 100%;
+                background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+                border-radius: 2px;
+                transition: width 1s linear;
+                width: 100%;
+            }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        @keyframes recordingPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(239, 68, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        
+        .meeting-scene {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .meeting-room {
+            background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        .prompt-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .answer-input {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .answer-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            outline: none;
+        }
+        
+        .feedback-correct {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .feedback-incorrect {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2563eb 0%, #7c3aed 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .scene-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+        }
+        
+        .scene-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        
+        .scene-button.active {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        
+        .sentence-example {
+            background: #f8fafc;
+            border-left: 4px solid #2563eb;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 0.5rem 0;
+        }
+        
+        .next-button {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .next-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+        
+        .voice-button {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(239, 68, 68, 0.3);
+        }
+        
+        .voice-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(239, 68, 68, 0.4);
+        }
+        
+        .voice-button.recording {
+            animation: recordingPulse 1.5s infinite;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+        
+        .voice-status {
+            text-align: center;
+            margin: 1rem 0;
+            font-weight: 600;
+            color: #6b7280;
+        }
+        
+        .recognized-text {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #e5e7eb;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .voice-instructions {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #0c4a6e;
+        }
+        
+        .permission-request {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #92400e;
+            text-align: center;
+        }
+        
+        .error-message {
+            background: #fee2e2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1rem 0;
+            color: #991b1b;
+            text-align: center;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .action-button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .primary-button {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            color: white;
+        }
+        
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .secondary-button {
+            background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+            color: white;
+        }
+        
+        .secondary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(107, 114, 128, 0.3);
+        }
+        
+        .stop-button {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+        }
+        
+        .stop-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+        }
+        
+        .recognition-info {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+            text-align: center;
+        }
+        
+        .recording-controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .timer-display {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ef4444;
+        }
+        
+        .hover\:text-secondary:hover{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity, 1))}
+        
+        @media (min-width: 640px){.sm\:flex-row{flex-direction:row}}
+        
+        @media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}
+        
+        @media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}
+    </style><script id="anydoc-subtitle-inject" src="chrome-extension://aopddeflghjljihihabdclejbojaomaf/public/subtitle/script/inject.js"></script></head>
+<body class="font-inter meeting-scene">
+    <!-- 顶部导航 -->
+    <nav class="glass-effect text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">
+                <span class="mr-2">💬</span>
+                英语用语练习
+            </h1>
+            <div class="flex items-center space-x-4">
+                <span class="text-sm opacity-90">进度: <span id="progress-text">0%</span></span>
+                <div class="w-32 progress-bar">
+                    <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- 浏览器兼容性提示 -->
+        <div id="browser-warning" class="hidden bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div class="flex">
+                <div class="flex-shrink-0">
+                    <span class="text-yellow-400">⚠️</span>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-yellow-700">
+                        <strong>浏览器提示：</strong>语音识别功能在Chrome、Edge等现代浏览器中效果最佳。如果语音功能无法使用，请尝试使用最新版本的Chrome浏览器。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 场景选择界面 -->
+        <div id="scene-selection" class="text-center slide-up">
+            <h2 class="text-3xl font-bold text-white mb-8">选择会议场景</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <button class="scene-button hover-lift" onclick="startPractice(&#39;opening&#39;)" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">▶️</span>
+                    <h3 class="text-xl font-semibold mb-2">会议开场</h3>
+                    <p class="text-sm opacity-90">学习如何开始会议、问候和介绍议程</p>
+                </button>
+                
+                <button class="scene-button hover-lift" onclick="startPractice(&#39;discussion&#39;)" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">💬</span>
+                    <h3 class="text-xl font-semibold mb-2">引导讨论</h3>
+                    <p class="text-sm opacity-90">学习如何引导讨论、征求意见和控制流程</p>
+                </button>
+                
+                <button class="scene-button hover-lift" onclick="startPractice(&#39;opinions&#39;)" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">👍</span>
+                    <h3 class="text-xl font-semibold mb-2">表达意见</h3>
+                    <p class="text-sm opacity-90">学习如何表达同意、反对和提出建议</p>
+                </button>
+                
+                <button class="scene-button hover-lift" onclick="startPractice(&#39;questions&#39;)" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">❓</span>
+                    <h3 class="text-xl font-semibold mb-2">提问澄清</h3>
+                    <p class="text-sm opacity-90">学习如何提问、请求重复和澄清问题</p>
+                </button>
+                
+                <button class="scene-button hover-lift" onclick="startPractice(&#39;closing&#39;)" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">✅</span>
+                    <h3 class="text-xl font-semibold mb-2">会议结束</h3>
+                    <p class="text-sm opacity-90">学习如何总结会议、感谢和安排后续</p>
+                </button>
+                
+                <button class="scene-button hover-lift" onclick="startPractice('mixed')" style="opacity: 1; transform: translateY(0px);">
+                    <span class="text-3xl mb-2">🔀</span>
+                    <h3 class="text-xl font-semibold mb-2">综合练习</h3>
+                    <p class="text-sm opacity-90">混合所有场景进行综合练习</p>
+                </button>
+            </div>
+        </div>
+
+        <!-- 练习界面 -->
+        <div id="practice-area" class="max-w-4xl mx-auto hidden">
+            <div class="meeting-room p-8">
+                <!-- 场景标题 -->
+                <div class="text-center mb-8">
+                    <h2 id="scene-title" class="text-2xl font-bold text-gray-800 mb-2">会议结束</h2>
+                    <p id="scene-description" class="text-gray-600">学习如何总结会议、感谢和安排后续</p>
+                </div>
+
+                <!-- 当前进度 -->
+                <div class="mb-6">
+                    <div class="flex justify-between text-sm text-gray-600 mb-2">
+                        <span>题目 <span id="current-question">1</span> / <span id="total-questions">8</span></span>
+                        <span id="score-display">得分: 1</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div id="question-progress" class="progress-fill" style="width: 12.5%;"></div>
+                    </div>
+                </div>
+
+                <!-- 提示卡片 -->
+                <div class="prompt-card">
+                    <h3 class="text-xl font-semibold mb-2">
+                        <span class="mr-2">💡</span>
+                        请用英语表达
+                    </h3>
+                    <p id="chinese-prompt" class="text-lg">让我总结一下今天讨论的要点。</p>
+                </div>
+
+                <!-- 语音输入区域 -->
+                <div class="text-center mb-6">
+                    <div class="voice-instructions">
+                        <span class="mr-2">ℹ️</span>
+                        选择输入方式：语音或手动输入
+                    </div>
+                    
+                    <!-- 权限请求提示 -->
+                    <div id="permission-request" class="permission-request hidden">
+                        <span class="mr-2">🎤🚫</span>
+                        请允许浏览器访问您的麦克风以使用语音功能
+                    </div>
+                    
+                    <!-- 错误提示 -->
+                    <div id="error-message" class="error-message hidden"></div>
+                    
+                    <div class="voice-status" id="voice-status" style="color: rgb(107, 114, 128);">语音识别完成，可以检查答案了</div>
+                    
+                    <!-- 录音控制区域 -->
+                    <div class="recording-controls">
+                        <!-- 语音按钮 -->
+                        <div id="voice-button" class="voice-button" onclick="toggleRecording()"><span><span class="">🎤</span></span></div>
+                        
+                        <!-- 录音计时器 -->
+                        <div id="recording-timer" class="hidden">
+                            <div class="timer-display" id="timer-display">00:09</div>
+                            <div class="timer-bar">
+                                <div class="timer-fill" id="timer-fill" style="width: 10%;"></div>
+                            </div>
+                            <div class="recognition-info">
+                                点击麦克风按钮或"停止录音"按钮结束
+                            </div>
+                        </div>
+                        
+                        <!-- 停止录音按钮 -->
+                        <button id="stop-recording-button" class="action-button stop-button hidden" onclick="stopRecording()">
+                            <span>⏹️</span>
+                            停止录音
+                        </button>
+                    </div>
+                    
+                    <!-- 识别结果显示 -->
+                    <div class="recognized-text" id="recognized-text">let me recap the points of today's discussion and the tomorrow's schedule</div>
+                </div>
+
+                <!-- 手动输入区域 -->
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        <span class="mr-2">⌨️</span>
+                        或者手动输入：
+                    </label>
+                    <input type="text" id="english-answer" class="answer-input w-full" placeholder="请在这里输入你的英语表达..." onkeypress="handleKeyPress(event)">
+                </div>
+
+                <!-- 操作按钮区域 -->
+                <div class="action-buttons">
+                    <button id="check-button" class="action-button primary-button hidden" onclick="checkAnswer()">
+                        <span>✔️</span>
+                        检查答案
+                    </button>
+                    <button id="reset-button" class="action-button secondary-button hidden" onclick="resetInput()">
+                        <span>🎯</span>
+                        重新输入
+                    </button>
+                </div>
+
+                <!-- 反馈区域 -->
+                <div id="feedback-area" class="feedback-correct">✅ 正确！你的表达很好！<br><br>你说的："let me recap the points of today's discussion"</div>
+
+                <!-- 正确答案和解析 -->
+                <div id="correct-answer" class="">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                        <span class="mr-2 text-accent">⭐</span>
+                        常用表达
+                    </h4>
+                    <div id="answer-examples" class="space-y-2"><div class="sentence-example"><strong>1.</strong> Let me summarize the key points from today's discussion.</div><div class="sentence-example"><strong>2.</strong> I'd like to recap what we discussed today.</div><div class="sentence-example"><strong>3.</strong> Let me summarize the main takeaways from our meeting.</div></div>
+                </div>
+
+                <!-- 下一题按钮 -->
+                <div id="next-button-container" class="text-center mt-6">
+                    <button class="next-button px-8 py-3" onclick="nextQuestion()">
+                        <span class="mr-2">➡️</span>
+                        下一题
+                    </button>
+                </div>
+
+                <!-- 返回场景选择 -->
+                <div class="text-center mt-8">
+                    <button class="text-primary hover:text-secondary transition-colors" onclick="backToSelection()">
+                        <span class="mr-2">⬅️</span>
+                        返回场景选择
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 练习结果界面 -->
+        <div id="practice-result" class="hidden text-center slide-up">
+            <div class="meeting-room p-8 max-w-2xl mx-auto">
+                <div id="result-icon" class="text-6xl mb-4"></div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">练习完成！</h2>
+                <div id="result-message" class="text-xl text-gray-600 mb-6"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-primary" id="total-questions-count">10</div>
+                        <div class="text-sm text-gray-600">总题数</div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-success" id="correct-answers-count">0</div>
+                        <div class="text-sm text-gray-600">正确答案</div>
+                    </div>
+                    <div class="bg-yellow-50 p-4 rounded-lg">
+                        <div class="text-2xl font-bold text-accent" id="final-score">0%</div>
+                        <div class="text-sm text-gray-600">正确率</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="scene-button px-6 py-3" onclick="restartPractice()">
+                        <span class="mr-2">🎯</span>
+                        重新练习
+                    </button>
+                    <button class="scene-button px-6 py-3" onclick="backToSelection()">
+                        <span class="mr-2">🏠</span>
+                        返回主页
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 自定义场景上传 -->
+        <div id="custom-scene-manager" class="max-w-4xl mx-auto mt-8">
+            <div class="text-center">
+                <h3 class="text-gray-600 mb-2">自定义场景</h3>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-2">
+                    <label class="answer-input flex-grow max-w-md cursor-pointer" style="padding: 0.5rem; display: flex; align-items: center; justify-content: center;">
+                        <span id="file-name-display">选择JSON文件</span>
+                        <input type="file" id="json-upload" accept=".json" class="hidden" lang="zh-CN" onchange="updateFileName(this)">
+                    </label>
+                    <button class="action-button secondary-button" onclick="uploadCustomScene()">上传并保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 会议用语数据
+        const meetingPhrases = {
+            opening: [
+                {
+                    chinese: "大家早上好，欢迎参加今天的会议。",
+                    english: ["Good morning everyone, welcome to today's meeting.", "Good morning everyone, thank you for joining us today."]
+                },
+                {
+                    chinese: "既然大家都到了，我们开始吧。",
+                    english: ["Since everyone is here, let's get started.", "Now that everyone is here, let's begin.", "Shall we get started since everyone is present?"]
+                },
+                {
+                    chinese: "今天我们有几个议题要讨论。",
+                    english: ["We have several topics to discuss today.", "Today we have a few items on the agenda.", "There are several points we need to cover today."]
+                },
+                {
+                    chinese: "让我简单介绍一下今天的议程。",
+                    english: ["Let me briefly go over today's agenda.", "Let me introduce today's agenda briefly.", "I'd like to outline today's agenda."]
+                },
+                {
+                    chinese: "我们大约有60分钟的时间，所以请大家集中注意力。",
+                    english: ["We have about 60 minutes, so let's stay focused.", "We have approximately one hour, so let's keep on track.", "Our time is limited to 60 minutes, so let's make the most of it."]
+                },
+                {
+                    chinese: "首先，让我们回顾一下上次会议的纪要。",
+                    english: ["First, let's review the minutes from our last meeting.", "To begin, let's go over the minutes from the previous meeting.", "First, let's recap what was discussed in our last meeting."]
+                },
+                {
+                    chinese: "我想介绍一下我们的新同事。",
+                    english: ["I'd like to introduce our new colleague.", "Let me introduce our new team member.", "I want to welcome our new colleague."]
+                },
+                {
+                    chinese: "今天会议的目标是确定项目的时间表。",
+                    english: ["Today's goal is to finalize the project timeline.", "Our objective today is to establish the project schedule.", "The purpose of today's meeting is to determine the project timeline."]
+                }
+            ],
+            discussion: [
+                {
+                    chinese: "我们从第一个议题开始吧。",
+                    english: ["Let's start with the first item.", "Shall we begin with the first topic?", "Let's move to the first agenda item."]
+                },
+                {
+                    chinese: "大家对这个问题有什么看法？",
+                    english: ["What are your thoughts on this issue?", "How do you feel about this problem?", "What's your opinion on this matter?"]
+                },
+                {
+                    chinese: "我们进行下一个议题吧。",
+                    english: ["Let's move on to the next item.", "Shall we proceed to the next topic?", "Let's turn to the next agenda item."]
+                },
+                {
+                    chinese: "有人想补充什么吗？",
+                    english: ["Does anyone have anything to add?", "Would anyone like to contribute further?", "Any additional comments?"]
+                },
+                {
+                    chinese: "我们需要在这个问题上达成共识。",
+                    english: ["We need to reach a consensus on this issue.", "We should come to an agreement on this matter.", "It's important that we align on this point."]
+                },
+                {
+                    chinese: "让我们分组讨论解决方案。",
+                    english: ["Let's break into groups to discuss solutions.", "We can form small groups to brainstorm solutions.", "Let's split into teams to discuss possible solutions."]
+                },
+                {
+                    chinese: "讨论有些偏离主题了，我们回到正题。",
+                    english: ["We're getting off track, let's get back to the main point.", "The discussion is wandering, let's refocus on the main issue.", "We're digressing, let's return to the original topic."]
+                },
+                {
+                    chinese: "我们需要控制时间，所以请大家简明扼要。",
+                    english: ["We need to manage our time, so please be concise.", "Time is limited, so let's keep our comments brief.", "We're on a tight schedule, so please be to the point."]
+                }
+            ],
+            opinions: [
+                {
+                    chinese: "我完全同意你的建议。",
+                    english: ["I fully agree with your suggestion.", "I completely support your proposal.", "I totally agree with what you're saying."]
+                },
+                {
+                    chinese: "我认为这是个好主意。",
+                    english: ["I think that's a great idea.", "I believe this is a good approach.", "In my opinion, this is an excellent suggestion."]
+                },
+                {
+                    chinese: "恐怕我不能同意这个观点。",
+                    english: ["I'm afraid I can't agree with this观点.", "I'm sorry, but I disagree with this approach.", "Unfortunately, I have a different opinion."]
+                },
+                {
+                    chinese: "我建议我们先进行一个试点项目。",
+                    english: ["I suggest we run a pilot project first.", "I recommend conducting a trial first.", "My suggestion is to test this with a pilot program."]
+                },
+                {
+                    chinese: "从我的角度来看，我们有两个选择。",
+                    english: ["From my perspective, we have two options.", "In my view, there are two choices available.", "As I see it, we have two alternatives."]
+                },
+                {
+                    chinese: "我认为我们应该分配更多资源给这个项目。",
+                    english: ["I think we should allocate more resources to this project.", "I believe we need to invest more resources in this project.", "In my opinion, this project deserves more resources."]
+                },
+                {
+                    chinese: "也许我们可以在这个问题上折中一下。",
+                    english: ["Maybe we can find a middle ground on this issue.", "Perhaps we can reach a compromise on this point.", "Maybe we can meet halfway on this."]
+                },
+                {
+                    chinese: "我对这个方案持保留态度。",
+                    english: ["I have reservations about this plan.", "I'm cautious about this approach.", "I'm not fully convinced about this solution."]
+                }
+            ],
+            questions: [
+                {
+                    chinese: "你能详细解释一下吗？",
+                    english: ["Could you elaborate on that?", "Can you explain that in more detail?", "Would you mind providing more details?"]
+                },
+                {
+                    chinese: "我没听清楚，你能再说一遍吗？",
+                    english: ["I didn't catch that, could you repeat it?", "I'm sorry, I missed that. Could you say it again?", "Could you repeat that, please? I didn't hear clearly."]
+                },
+                {
+                    chinese: "你具体是什么意思？",
+                    english: ["What exactly do you mean?", "Could you clarify what you mean?", "What do you mean specifically?"]
+                },
+                {
+                    chinese: "你能提供更多细节吗？",
+                    english: ["Can you provide more details?", "Would you mind giving us more information?", "Could you elaborate with more specifics?"]
+                },
+                {
+                    chinese: "我理解得对吗？",
+                    english: ["Am I understanding this correctly?", "Is my understanding correct?", "Did I get that right?"]
+                },
+                {
+                    chinese: "这个决定会影响我们的时间表吗？",
+                    english: ["Will this decision affect our timeline?", "How will this decision impact our schedule?", "Does this decision have implications for our timeline?"]
+                },
+                {
+                    chinese: "有人对这个规定有异议吗？",
+                    english: ["Does anyone have objections to this regulation?", "Is there anyone who disagrees with this rule?", "Any objections to this policy?"]
+                },
+                {
+                    chinese: "我们需要进一步讨论这个问题吗？",
+                    english: ["Do we need to discuss this further?", "Should we explore this issue in more depth?", "Is further discussion needed on this matter?"]
+                }
+            ],
+            closing: [
+                {
+                    chinese: "让我总结一下今天讨论的要点。",
+                    english: ["Let me summarize the key points from today's discussion.", "I'd like to recap what we discussed today.", "Let me summarize the main takeaways from our meeting."]
+                },
+                {
+                    chinese: "感谢大家今天的参与和贡献。",
+                    english: ["Thank you all for your participation and contributions.", "I appreciate everyone's input today.", "Thank you for your valuable contributions."]
+                },
+                {
+                    chinese: "我们达成了一些重要的共识。",
+                    english: ["We've reached some important agreements.", "We've come to several key decisions.", "Some significant consensus has been achieved."]
+                },
+                {
+                    chinese: "我会在明天之前发送会议纪要。",
+                    english: ["I'll send out the meeting minutes by tomorrow.", "The minutes will be distributed by tomorrow.", "I'll circulate the meeting notes before tomorrow."]
+                },
+                {
+                    chinese: "下次会议安排在下周同一时间。",
+                    english: ["The next meeting is scheduled for the same time next week.", "We'll meet again at the same time next week.", "Our next meeting will be next week at the same time."]
+                },
+                {
+                    chinese: "如果没有其他问题，会议到此结束。",
+                    english: ["If there are no further questions, the meeting is adjourned.", "Unless there are any other questions, we can end here.", "If no one has anything else to add, we'll conclude the meeting."]
+                },
+                {
+                    chinese: "请大家确保按时完成分配的任务。",
+                    english: ["Please ensure you complete your assigned tasks on time.", "Make sure to finish your tasks by the deadline.", "Please meet the deadlines for your assigned responsibilities."]
+                },
+                {
+                    chinese: "期待看到我们的计划成功实施。",
+                    english: ["I look forward to seeing our plans successfully implemented.", "I'm excited to see our plans put into action.", "I anticipate successful execution of our plans."]
+                }
+            ]
+        };
+
+        // 全局变量
+        let currentScene = '';
+        let currentQuestions = [];
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let totalQuestions = 0;
+        
+        // 语音识别相关变量
+        let recognition = null;
+        let isRecording = false;
+        let currentRecognizedText = '';
+        let recognizedSegments = []; // 存储所有识别片段
+        let permissionGranted = false;
+        let recordingTimer = null;
+        let recordingStartTime = 0;
+        let maxRecordingTime = 10; // 最大录音时间（秒）
+
+        // 场景信息
+        const sceneInfo = {
+            opening: {
+                title: "会议开场",
+                description: "学习如何开始会议、问候和介绍议程"
+            },
+            discussion: {
+                title: "引导讨论",
+                description: "学习如何引导讨论、征求意见和控制流程"
+            },
+            opinions: {
+                title: "表达意见",
+                description: "学习如何表达同意、反对和提出建议"
+            },
+            questions: {
+                title: "提问澄清",
+                description: "学习如何提问、请求重复和澄清问题"
+            },
+            closing: {
+                title: "会议结束",
+                description: "学习如何总结会议、感谢和安排后续"
+            },
+            mixed: {
+                title: "综合练习",
+                description: "混合所有场景进行综合练习"
+            }
+        };
+
+        // 初始化语音识别
+        async function initSpeechRecognition() {
+            try {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                if (!SpeechRecognition) {
+                    showError("您的浏览器不支持语音识别功能，请使用Chrome或Edge浏览器");
+                    return false;
+                }
+
+                // 检查麦克风权限
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    stream.getTracks().forEach(track => track.stop());
+                    permissionGranted = true;
+                    document.getElementById('permission-request').classList.add('hidden');
+                } catch (permissionError) {
+                    permissionGranted = false;
+                    showPermissionRequest();
+                    return false;
+                }
+
+                recognition = new SpeechRecognition();
+                recognition.continuous = true; // 使用连续识别模式
+                recognition.interimResults = false;
+                recognition.lang = 'en-US';
+                recognition.maxAlternatives = 1;
+
+                // 延长静音检测时间
+                recognition.onaudiostart = function() {
+                    console.log('Audio started');
+                };
+                
+                recognition.onstart = function() {
+                    isRecording = true;
+                    startRecordingTimer();
+                    updateVoiceUI(true);
+                };
+                
+                recognition.onresult = function(event) {
+                    // 获取所有识别结果并追加到数组中
+                    for (let i = event.resultIndex; i < event.results.length; i++) {
+                        const transcript = event.results[i][0].transcript.trim();
+                        if (transcript) {
+                            recognizedSegments.push(transcript);
+                        }
+                    }
+                    
+                    // 将所有片段连接成完整文本
+                    currentRecognizedText = recognizedSegments.join(' ');
+                    document.getElementById('recognized-text').textContent = currentRecognizedText;
+                    document.getElementById('english-answer').value = currentRecognizedText;
+                };
+                
+                recognition.onend = function(event) {
+                    // 检查是否需要重新启动识别
+                    if (isRecording && Date.now() - recordingStartTime < maxRecordingTime * 1000) {
+                        try {
+                            recognition.start();
+                        } catch (error) {
+                            console.error('重启识别失败:', error);
+                            stopRecordingInternal();
+                        }
+                    } else {
+                        stopRecordingInternal();
+                    }
+                };
+                
+                recognition.onerror = function(event) {
+                    console.error('语音识别错误:', event.error);
+                    
+                    if (event.error !== 'no-speech' && event.error !== 'audio-capture') {
+                        stopRecordingInternal();
+                        
+                        let errorMessage = '识别失败，请重试';
+                        switch(event.error) {
+                            case 'not-allowed':
+                                errorMessage = '麦克风权限被拒绝，请在浏览器设置中启用';
+                                showPermissionRequest();
+                                break;
+                            case 'aborted':
+                                errorMessage = '录音已取消';
+                                break;
+                            case 'network':
+                                errorMessage = '网络错误，请检查网络连接';
+                                break;
+                        }
+                        
+                        showError(errorMessage);
+                    }
+                };
+                
+                return true;
+            } catch (error) {
+                console.error('初始化语音识别失败:', error);
+                showError('初始化语音功能失败，请刷新页面重试');
+                return false;
+            }
+        }
+
+        // 开始录音计时器
+        function startRecordingTimer() {
+            recordingStartTime = Date.now();
+            updateTimerDisplay();
+            
+            recordingTimer = setInterval(() => {
+                const elapsedTime = Math.floor((Date.now() - recordingStartTime) / 1000);
+                
+                if (elapsedTime >= maxRecordingTime) {
+                    stopRecording();
+                    return;
+                }
+                
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        // 更新计时器显示
+        function updateTimerDisplay() {
+            const elapsedTime = Math.floor((Date.now() - recordingStartTime) / 1000);
+            const remainingTime = maxRecordingTime - elapsedTime;
+            
+            const minutes = Math.floor(elapsedTime / 60);
+            const seconds = elapsedTime % 60;
+            const timeString = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            document.getElementById('timer-display').textContent = timeString;
+            
+            // 更新进度条
+            const progress = (elapsedTime / maxRecordingTime) * 100;
+            document.getElementById('timer-fill').style.width = (100 - progress) + '%';
+        }
+
+        // 停止录音（内部函数）
+        function stopRecordingInternal() {
+            if (isRecording) {
+                isRecording = false;
+                
+                if (recognition) {
+                    try {
+                        recognition.stop();
+                    } catch (error) {
+                        console.error('停止识别失败:', error);
+                    }
+                }
+                
+                if (recordingTimer) {
+                    clearInterval(recordingTimer);
+                    recordingTimer = null;
+                }
+                
+                updateVoiceUI(false);
+                
+                if (currentRecognizedText.trim()) {
+                    document.getElementById('voice-status').textContent = '语音识别完成，可以检查答案了';
+                } else {
+                    document.getElementById('voice-status').textContent = '未识别到语音，请重试';
+                }
+            }
+        }
+
+        // 停止录音（公开函数）
+        function stopRecording() {
+            stopRecordingInternal();
+        }
+
+        // 显示权限请求提示
+        function showPermissionRequest() {
+            document.getElementById('permission-request').classList.remove('hidden');
+            document.getElementById('error-message').classList.add('hidden');
+        }
+
+        // 显示错误信息
+        function showError(message) {
+            const errorElement = document.getElementById('error-message');
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+            
+            setTimeout(() => {
+                errorElement.classList.add('hidden');
+            }, 5000);
+        }
+
+        // 更新语音UI
+        function updateVoiceUI(isRecording) {
+            const voiceButton = document.getElementById('voice-button');
+            const voiceStatus = document.getElementById('voice-status');
+            const recordingTimer = document.getElementById('recording-timer');
+            const stopButton = document.getElementById('stop-recording-button');
+            
+            if (isRecording) {
+voiceButton.innerHTML = '<span><span class="">🎤</span></span>';
+                voiceStatus.textContent = '正在录音...请清晰说话';
+                voiceStatus.style.color = '#ef4444';
+                recordingTimer.classList.remove('hidden');
+                stopButton.classList.remove('hidden');
+                document.getElementById('recognized-text').textContent = '识别中...';
+            } else {
+                voiceButton.classList.remove('recording');
+                voiceButton.innerHTML = '<span><span class="">🎤</span></span>';
+                voiceStatus.style.color = '#6b7280';
+                recordingTimer.classList.add('hidden');
+                stopButton.classList.add('hidden');
+            }
+        }
+
+        // 切换录音状态
+        async function toggleRecording() {
+            document.getElementById('error-message').classList.add('hidden');
+            
+            if (isRecording) {
+                stopRecording();
+                return;
+            }
+            
+            if (!permissionGranted) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                    stream.getTracks().forEach(track => track.stop());
+                    permissionGranted = true;
+                    document.getElementById('permission-request').classList.add('hidden');
+                } catch (error) {
+                    showPermissionRequest();
+                    return;
+                }
+            }
+
+            if (!recognition) {
+                const supported = await initSpeechRecognition();
+                if (!supported) {
+                    return;
+                }
+            }
+            
+            // 重置之前的识别结果
+            recognizedSegments = [];
+            currentRecognizedText = '';
+            document.getElementById('recognized-text').textContent = '准备录音...';
+            
+            try {
+                recognition.start();
+            } catch (error) {
+                console.error('开始录音失败:', error);
+                showError('无法开始录音，请重试');
+                updateVoiceUI(false);
+            }
+        }
+
+        // 开始练习
+        async function startPractice(scene) {
+            currentScene = scene;
+            currentQuestionIndex = 0;
+            score = 0;
+
+            if (scene === 'mixed') {
+                currentQuestions = [];
+                Object.values(meetingPhrases).forEach(scenePhrases => {
+                    currentQuestions = currentQuestions.concat(scenePhrases);
+                });
+                currentQuestions = shuffleArray(currentQuestions).slice(0, 10);
+            } else {
+                currentQuestions = [...meetingPhrases[scene]];
+            }
+
+            totalQuestions = currentQuestions.length;
+
+            document.getElementById('scene-selection').classList.add('hidden');
+            document.getElementById('custom-scene-manager').classList.add('hidden');
+            document.getElementById('practice-area').classList.remove('hidden');
+
+            document.getElementById('scene-title').textContent = sceneInfo[scene].title;
+            document.getElementById('scene-description').textContent = sceneInfo[scene].description;
+
+            document.getElementById('total-questions').textContent = totalQuestions;
+            updateProgress();
+
+            showCurrentQuestion();
+            
+            await initSpeechRecognition();
+            
+            if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+                document.getElementById('browser-warning').classList.remove('hidden');
+            }
+        }
+
+        // 显示当前题目
+        function showCurrentQuestion() {
+            const question = currentQuestions[currentQuestionIndex];
+            document.getElementById('chinese-prompt').textContent = question.chinese;
+            resetInput();
+            
+            document.getElementById('feedback-area').classList.add('hidden');
+            document.getElementById('correct-answer').classList.add('hidden');
+            document.getElementById('next-button-container').classList.add('hidden');
+            document.getElementById('permission-request').classList.add('hidden');
+            document.getElementById('error-message').classList.add('hidden');
+            
+            document.getElementById('check-button').classList.remove('hidden');
+            document.getElementById('reset-button').classList.remove('hidden');
+            
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+        }
+
+        // 重置输入
+        function resetInput() {
+            document.getElementById('english-answer').value = '';
+            recognizedSegments = [];
+            currentRecognizedText = '';
+            document.getElementById('recognized-text').textContent = '识别的文本将显示在这里...';
+            document.getElementById('voice-status').textContent = '准备就绪，请选择输入方式';
+            document.getElementById('voice-status').style.color = '#6b7280';
+            
+            stopRecording();
+        }
+
+        // 检查答案
+        function checkAnswer() {
+            const userAnswer = document.getElementById('english-answer').value.trim().toLowerCase();
+            if (!userAnswer) {
+                document.getElementById('voice-status').textContent = '请先输入或说出你的答案';
+                document.getElementById('voice-status').style.color = '#ef4444';
+                return;
+            }
+            
+            const correctAnswers = currentQuestions[currentQuestionIndex].english;
+            
+            let isCorrect = false;
+            let bestMatch = '';
+            let bestSimilarity = 0;
+            
+            for (let correctAnswer of correctAnswers) {
+                const normalizedCorrect = correctAnswer.toLowerCase().replace(/[^\w\s]/g, '');
+                const normalizedUser = userAnswer.replace(/[^\w\s]/g, '');
+                
+                const similarityScore = similarity(normalizedUser, normalizedCorrect);
+                
+                if (similarityScore > bestSimilarity) {
+                    bestSimilarity = similarityScore;
+                    bestMatch = correctAnswer;
+                }
+                
+                if (normalizedUser.includes(normalizedCorrect) || 
+                    normalizedCorrect.includes(normalizedUser) ||
+                    similarityScore > 0.6) {
+                    isCorrect = true;
+                    break;
+                }
+            }
+            
+            if (isCorrect) {
+                score++;
+                feedbackMessage = `✅ 正确！你的表达很好！\n\n你说的："${userAnswer}"`;
+                document.getElementById('feedback-area').className = 'feedback-correct';
+            } else {
+                feedbackMessage = `❌ 不太对，让我们看看正确的表达。\n\n你说的："${userAnswer}"\n\n最接近的正确表达："${bestMatch}"`;
+                document.getElementById('feedback-area').className = 'feedback-incorrect';
+            }
+            
+            document.getElementById('feedback-area').innerHTML = feedbackMessage.replace(/\n/g, '<br>');
+            document.getElementById('feedback-area').classList.remove('hidden');
+            
+            showCorrectAnswers();
+            
+            document.getElementById('check-button').classList.add('hidden');
+            document.getElementById('reset-button').classList.add('hidden');
+            document.getElementById('next-button-container').classList.remove('hidden');
+            
+            document.getElementById('score-display').textContent = `得分: ${score}`;
+        }
+
+        // 显示正确答案
+        function showCorrectAnswers() {
+            const correctAnswers = currentQuestions[currentQuestionIndex].english;
+            const examplesContainer = document.getElementById('answer-examples');
+            examplesContainer.innerHTML = '';
+            
+            correctAnswers.forEach((answer, index) => {
+                const exampleDiv = document.createElement('div');
+                exampleDiv.className = 'sentence-example';
+                exampleDiv.innerHTML = `<strong>${index + 1}.</strong> ${answer}`;
+                examplesContainer.appendChild(exampleDiv);
+            });
+            
+            document.getElementById('correct-answer').classList.remove('hidden');
+        }
+
+        // 下一题
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < totalQuestions) {
+                showCurrentQuestion();
+                updateProgress();
+            } else {
+                showResult();
+            }
+        }
+
+        // 更新进度
+        function updateProgress() {
+            const progress = ((currentQuestionIndex + 1) / totalQuestions) * 100;
+            document.getElementById('question-progress').style.width = progress + '%';
+            document.getElementById('progress-fill').style.width = ((score / totalQuestions) * 100) + '%';
+            document.getElementById('progress-text').textContent = Math.round((score / totalQuestions) * 100) + '%';
+        }
+
+        // 显示结果
+        function showResult() {
+            document.getElementById('practice-area').classList.add('hidden');
+            document.getElementById('practice-result').classList.remove('hidden');
+            
+            const accuracy = Math.round((score / totalQuestions) * 100);
+            
+            document.getElementById('total-questions-count').textContent = totalQuestions;
+            document.getElementById('correct-answers-count').textContent = score;
+            document.getElementById('final-score').textContent = accuracy + '%';
+            
+            const resultIcon = document.getElementById('result-icon');
+            const resultMessage = document.getElementById('result-message');
+            
+            if (accuracy >= 90) {
+                resultIcon.innerHTML = '🎉';
+                resultMessage.textContent = '太棒了！你已经掌握了英语会议用语！';
+            } else if (accuracy >= 70) {
+                resultIcon.innerHTML = '👍';
+                resultMessage.textContent = '做得很好！继续练习会更加完美！';
+            } else if (accuracy >= 50) {
+                resultIcon.innerHTML = '😊';
+                resultMessage.textContent = '不错的尝试！多练习会有很大进步！';
+            } else {
+                resultIcon.innerHTML = '💪';
+                resultMessage.textContent = '继续努力！多练习就能掌握！';
+            }
+        }
+
+        // 返回场景选择
+        function backToSelection() {
+            stopRecording();
+            
+            document.getElementById('practice-area').classList.add('hidden');
+            document.getElementById('practice-result').classList.add('hidden');
+            document.getElementById('scene-selection').classList.remove('hidden');
+            document.getElementById('custom-scene-manager').classList.remove('hidden');
+            document.getElementById('browser-warning').classList.add('hidden');
+            
+            document.getElementById('progress-fill').style.width = '0%';
+            document.getElementById('progress-text').textContent = '0%';
+        }
+
+        // 重新练习
+        function restartPractice() {
+            document.getElementById('custom-scene-manager').classList.add('hidden');
+            if (currentScene === 'opening' || currentScene === 'discussion' || 
+                currentScene === 'opinions' || currentScene === 'questions' || 
+                currentScene === 'closing' || currentScene === 'mixed') {
+                startPractice(currentScene);
+            } else {
+                // 如果是自定义场景，则重新开始自定义场景练习
+                startCustomPractice(currentScene);
+            }
+        }
+
+        // 处理键盘事件
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                checkAnswer();
+            }
+        }
+
+        // 工具函数：打乱数组
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        // 工具函数：计算字符串相似度
+        function similarity(s1, s2) {
+            if (s1.length === 0 || s2.length === 0) return 0;
+            
+            const longer = s1.length >= s2.length ? s1 : s2;
+            const shorter = s1.length < s2.length ? s1 : s2;
+            
+            const longerLength = longer.length;
+            if (longerLength === 0) return 1.0;
+            
+            return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+        }
+
+        function editDistance(s1, s2) {
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+
+            const costs = new Array();
+            for (let i = 0; i <= s1.length; i++) {
+                let lastValue = i;
+                for (let j = 0; j <= s2.length; j++) {
+                    if (i === 0) {
+                        costs[j] = j;
+                    } else {
+                        if (j > 0) {
+                            let newValue = costs[j - 1];
+                            if (s1.charAt(i - 1) !== s2.charAt(j - 1)) {
+                                newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+                            }
+                            costs[j - 1] = lastValue;
+                            lastValue = newValue;
+                        }
+                    }
+                }
+                if (i > 0) {
+                    costs[s2.length] = lastValue;
+                }
+            }
+            return costs[s2.length];
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.querySelectorAll('.hover-lift').forEach((element, index) => {
+                    setTimeout(() => {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 100);
+                });
+            }, 500);
+            // 延迟加载自定义场景，确保DOM完全加载
+            setTimeout(() => {
+                loadCustomScenes();
+            }, 1000);
+        });
+        
+        function uploadCustomScene() {
+            const fileInput = document.getElementById('json-upload');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('请选择一个JSON文件');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    const data = JSON.parse(event.target.result);
+                    if (validateJSON(data)) {
+                        saveCustomScene(data);
+                        loadCustomScenes();
+                        alert('自定义场景已成功上传并保存！');
+                    } else {
+                        alert('JSON文件格式不正确，请检查。');
+                    }
+                } catch (e) {
+                    alert('解析JSON文件时出错，请确保文件格式正确。');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function uploadCustomScene() {
+            const fileInput = document.getElementById('json-upload');
+            const file = fileInput.files[0];
+            if (!file) {
+                alert('请选择一个JSON文件');
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                try {
+                    const data = JSON.parse(event.target.result);
+                    if (validateJSON(data)) {
+                        saveCustomScene(data);
+                        loadCustomScenes();
+                        alert('自定义场景已成功上传并保存！');
+                    } else {
+                        alert('JSON文件格式不正确，请检查。');
+                    }
+                } catch (e) {
+                    alert('解析JSON文件时出错，请确保文件格式正确。');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function validateJSON(data) {
+            // 验证基本字段
+            if (!data.id || typeof data.id !== 'string') return false;
+            if (!data.title || typeof data.title !== 'string') return false;
+            if (!data.description || typeof data.description !== 'string') return false;
+            if (!data.questions || !Array.isArray(data.questions)) return false;
+
+            // 验证问题数组中的每个问题
+            for (const q of data.questions) {
+                if (!q.chinese || typeof q.chinese !== 'string') return false;
+                
+                // 验证英文字段，需要支持字符串或字符串数组两种格式
+                if (!q.english) return false;
+                
+                if (typeof q.english === 'string') {
+                    // 如果是字符串，转换为数组格式
+                    q.english = [q.english];
+                } else if (Array.isArray(q.english)) {
+                    // 如果是数组，验证数组中每个元素都是字符串
+                    for (const eng of q.english) {
+                        if (typeof eng !== 'string') return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function saveCustomScene(data) {
+            // 保存前再次验证并确保格式正确
+            if (validateJSON(data)) {
+                // 确保所有英文答案都是数组格式
+                const processedData = {
+                    ...data,
+                    questions: data.questions.map(q => {
+                        if (typeof q.english === 'string') {
+                            return {...q, english: [q.english]};
+                        } else {
+                            return {...q};
+                        }
+                    })
+                };
+                localStorage.setItem('custom_scenario_' + data.id, JSON.stringify(processedData));
+            }
+        }
+
+        function loadCustomScenes() {
+            // 将自定义场景按钮添加到主场景选择区域
+            const sceneSelectionGrid = document.querySelector('#scene-selection .grid');
+            // 先清除现有的自定义场景按钮
+            document.querySelectorAll('.custom-scene-btn').forEach(btn => btn.remove());
+            
+            for (let i = 0; i < localStorage.length; i++) {
+                const key = localStorage.key(i);
+                if (key.startsWith('custom_scenario_')) {
+                    const data = JSON.parse(localStorage.getItem(key));
+                    const sceneButton = document.createElement('button');
+                    sceneButton.className = 'scene-button hover-lift custom-scene-btn';
+                    sceneButton.onclick = () => startCustomPractice(data.id);
+                    sceneButton.innerHTML = `
+                        <span class="text-3xl mb-2">📝</span>
+                        <h3 class="text-xl font-semibold mb-2">${data.title}</h3>
+                        <p class="text-sm opacity-90">${data.description}</p>
+                    `;
+                    sceneSelectionGrid.appendChild(sceneButton);
+                }
+            }
+        }
+
+        function deleteCustomScene(id, event) {
+            event.stopPropagation();
+            if (confirm('确定要删除这个自定义场景吗？')) {
+                localStorage.removeItem('custom_scenario_' + id);
+                // 重新加载自定义场景以更新界面
+                setTimeout(() => {
+                    loadCustomScenes();
+                }, 100);
+            }
+        }
+        
+        function updateFileName(input) {
+            const fileNameDisplay = document.getElementById('file-name-display');
+            if (input.files.length > 0) {
+                fileNameDisplay.textContent = input.files[0].name;
+            } else {
+                fileNameDisplay.textContent = '选择JSON文件';
+            }
+        }
+
+        function startCustomPractice(id) {
+            const data = JSON.parse(localStorage.getItem('custom_scenario_' + id));
+            currentScene = data.id;
+            // 确保每个问题的english字段是数组格式
+            currentQuestions = data.questions.map(q => {
+                if (typeof q.english === 'string') {
+                    return {...q, english: [q.english]};
+                } else {
+                    return {...q};
+                }
+            });
+            currentQuestionIndex = 0;
+            score = 0;
+            totalQuestions = currentQuestions.length;
+
+            document.getElementById('scene-selection').classList.add('hidden');
+            document.getElementById('custom-scene-manager').classList.add('hidden');
+            document.getElementById('practice-area').classList.remove('hidden');
+
+            document.getElementById('scene-title').textContent = data.title;
+            document.getElementById('scene-description').textContent = data.description;
+
+            document.getElementById('total-questions').textContent = totalQuestions;
+            updateProgress();
+
+            showCurrentQuestion();
+        }
+    </script>
+
+</body><wps-translate-entry><template shadowrootmode="open"><style>*,*:before,*:after{box-sizing:border-box;padding:0;margin:0}html,body,.root{width:100%;height:100%}button,input,select,textarea{font-family:inherit}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-thumb{background-color:#afafaf;border-radius:12px}.common-input{border-radius:48px;background-color:#f7f7f7;border:1px solid rgb(224,224,224);box-shadow:none}.common-input:hover{border-color:#a7a7a7;background-color:#f7f7f7}.common-input.active,.common-input:focus{background-color:#eff3ff;border-color:#2962ff}@keyframes rotate{to{transform:rotate(360deg)}}.fade-in-enter-active{transition:opacity .3s ease}.fade-in-enter-from{opacity:0}.slow-fade-in-enter-active{transition:opacity 1s ease}.slow-fade-in-enter-from{opacity:0}[dir=rtl] .rtl-rotate-icon{rotate:180deg}.base-button[data-v-470f436e]{-webkit-user-select:none;user-select:none;display:flex;align-items:center;justify-content:center;height:36px;padding:0 16px;font-size:14px;text-align:center;cursor:pointer;border-radius:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.base-button.block[data-v-470f436e]{display:block;width:100%;margin:0;padding:0}.base-button.big[data-v-470f436e]{height:48px;font-size:16px;border-radius:12px}.base-button-default[data-v-470f436e]{outline:none;color:#000;background-color:#fff;border:1px solid rgb(224,224,224)}.base-button-default[data-v-470f436e]:hover{background:#f7f7f7;border:1px solid rgb(167,167,167)}.base-button-default[data-v-470f436e]:active,.base-button-default.active[data-v-470f436e]{background:#e0e0e0;border:1px solid rgb(167,167,167)}.base-button-default[disabled][data-v-470f436e],.base-button-default.disabled[data-v-470f436e]{outline:none;opacity:.4;cursor:auto}.base-button-default[disabled][data-v-470f436e]:hover,.base-button-default[disabled][data-v-470f436e]:active,.base-button-default[disabled].active[data-v-470f436e],.base-button-default.disabled[data-v-470f436e]:hover,.base-button-default.disabled[data-v-470f436e]:active,.base-button-default.disabled.active[data-v-470f436e]{background-color:#fff}.base-button-default[data-v-470f436e]:focus-visible{outline:none}.base-button-primary[data-v-470f436e]{color:#fff;background-color:#2962ff;border:none}.base-button-primary[data-v-470f436e]:hover,.base-button-primary[data-v-470f436e]:active,.base-button-primary.active[data-v-470f436e]{border:none}.base-button-primary[data-v-470f436e]:hover{opacity:.8}.base-button-primary[data-v-470f436e]:active,.base-button-primary.active[data-v-470f436e]{background-color:#1c4eda;opacity:1}.base-button-primary[disabled][data-v-470f436e],.base-button-primary.disabled[data-v-470f436e]{opacity:.4;cursor:auto}.base-button-primary[disabled][data-v-470f436e]:active,.base-button-primary[disabled].active[data-v-470f436e],.base-button-primary.disabled[data-v-470f436e]:active,.base-button-primary.disabled.active[data-v-470f436e]{background-color:#2962ff}.base-button-primary[data-v-470f436e]:focus-visible{outline:none}.base-button-text[data-v-470f436e]{color:#2962ff;background-color:transparent;border:none;padding:4px;border-radius:8px}.base-button-text[data-v-470f436e]:hover{background:#f7f7f7}.base-button-text[data-v-470f436e]:active,.base-button-text.active[data-v-470f436e]{background:#efefef}.base-button-text[disabled][data-v-470f436e],.base-button-text.disabled[data-v-470f436e]{opacity:.4;cursor:auto}.base-button-text[disabled][data-v-470f436e]:active,.base-button-text[disabled].active[data-v-470f436e],.base-button-text.disabled[data-v-470f436e]:active,.base-button-text.disabled.active[data-v-470f436e]{background-color:transparent}.icon[data-v-b348f0a6]{display:inline-block;flex-shrink:0;width:20px;height:20px;background-repeat:no-repeat;background-position:center center;background-size:contain}.icon .svg[data-v-b348f0a6]{width:100%;height:100%}.icon.svg-icon[data-v-b348f0a6]{background:none}.icon-button[data-v-4b3aafaf]{display:inline-block;flex-shrink:0;padding:4px;border-radius:4px;cursor:pointer}.icon-button[data-v-4b3aafaf]:hover{background:#f0f0f0}.icon-button.active[data-v-4b3aafaf],.icon-button[data-v-4b3aafaf]:active,.icon-button[data-v-4b3aafaf]:focus{background:#e0e0e0}.icon-button.active[data-v-4b3aafaf]:hover{background:#e0e0e0}.icon-button.disabled[data-v-4b3aafaf]{opacity:.5;cursor:default;pointer-events:none}.popup-container[data-v-ef2175fa]{position:absolute;z-index:1;border-radius:8px;background-color:#fff;border:1px solid rgb(224,224,224);box-shadow:0 12px 32px #00000029}.base-select[data-v-440624f5]{position:relative;color:#000}.base-select .select-input[data-v-440624f5]{height:40px;position:relative;display:flex;gap:12px;align-items:center;justify-content:space-between;cursor:pointer;background-color:#f7f7f7;border:1px solid rgb(224,224,224);border-radius:48px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}[dir=ltr] .base-select .select-input[data-v-440624f5]{padding:0 16px 0 4px}[dir=rtl] .base-select .select-input[data-v-440624f5]{padding:0 4px 0 16px}.base-select .select-input.small[data-v-440624f5]{width:267px;height:46px;padding:0 18px;font-size:14px}.base-select .select-input[data-v-440624f5]:hover{border-color:#a7a7a7}.base-select .select-input[data-v-440624f5]:active,.base-select .select-input.active[data-v-440624f5]{background-color:#eff3ff;border-color:#2962ff}.base-select .select-input[disabled][data-v-440624f5],.base-select .select-input.disabled[data-v-440624f5]{outline:none;opacity:.4}.base-select .select-input[disabled][data-v-440624f5]:hover,.base-select .select-input[disabled][data-v-440624f5]:active,.base-select .select-input.disabled[data-v-440624f5]:hover,.base-select .select-input.disabled[data-v-440624f5]:active{background-color:transparent}.base-select .select-input .select-text[data-v-440624f5]{flex:1;font-weight:500;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}[dir=ltr] .base-select .select-input.active .select-arrow[data-v-440624f5]{transform:rotate(180deg)}[dir=rtl] .base-select .select-input.active .select-arrow[data-v-440624f5]{transform:rotate(-180deg)}.base-select .select-input .select-arrow[data-v-440624f5]{transition:transform .2s ease-in-out}.base-select .select-input .select-label[data-v-440624f5]{display:inline-block;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.base-select .select-input .select-label .select-subtext[data-v-440624f5]{opacity:.6}.base-select .select-input .select-placeholder[data-v-440624f5]{color:#b1b1b1}.base-select .select-options[data-v-440624f5]{display:flex;flex-direction:column;height:476px;padding:24px 0;overflow:auto;border-radius:24px}.base-select .select-options .option-list[data-v-440624f5]{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden auto}.base-select .select-options .option-list .option[data-v-440624f5]{position:relative;display:flex;align-items:center;width:198px;height:48px;padding-inline:54px 6px;cursor:pointer;border-radius:12px}.base-select .select-options .option-list .option.empty[data-v-440624f5]{visibility:hidden}.base-select .select-options .option-list .option .option-text[data-v-440624f5]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.base-select .select-options .option-list .option .selected-icon[data-v-440624f5]{position:absolute;inset-inline-start:30px;color:#2962ff}.base-select .select-options .option-list .option[data-v-440624f5]:hover{background-color:#f0f0f0}.base-select .select-options .option-list .option.selected .option-text[data-v-440624f5]{font-weight:500;color:#2962ff}.base-select .select-options.single-column[data-v-440624f5]{width:fit-content;padding:8px}.base-radio[data-v-8c1f8e3c]{display:flex;-webkit-user-select:none;user-select:none;align-items:center}.base-radio .radio-container[data-v-8c1f8e3c]{cursor:pointer;display:flex;align-items:center;gap:8px}.base-radio .radio-container .radio[data-v-8c1f8e3c]{width:16px;height:16px;background-color:#f7f7f7;border:1px solid #E0E0E0;border-radius:50%}.base-radio .radio-container .radio.checked[data-v-8c1f8e3c]{background-color:#fff;border:1px solid #2962FF}.base-radio .radio-container .radio.checked[data-v-8c1f8e3c]:after{display:block;width:10px;height:10px;margin:2px;content:"";background-color:#2962ff;border-radius:50%}.base-radio .radio-container .label[data-v-8c1f8e3c]{cursor:pointer;flex:1}.exceed-limit-tip-wrapper[data-v-e7dc8388]{position:relative;border-radius:8px;box-shadow:0 12px 32px #0d0d0d14}.exceed-limit-tip-wrapper .exceed-limit-tip-bg[data-v-e7dc8388]{position:absolute;z-index:0;top:0;bottom:0;border-radius:inherit}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip-bg[data-v-e7dc8388]{left:0;right:0;background:linear-gradient(90deg,#47c8ff,#2962ff)}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip-bg[data-v-e7dc8388]{right:0;left:0;background:linear-gradient(-90deg,#47c8ff,#2962ff)}.exceed-limit-tip-wrapper .exceed-limit-tip[data-v-e7dc8388]{position:relative;font-size:12px;line-height:1.5;border-radius:inherit;border:1px solid transparent;background-color:#fff;background-clip:padding-box}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip[data-v-e7dc8388]{padding:12px 34px 12px 16px}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip[data-v-e7dc8388]{padding:12px 16px 12px 34px}.exceed-limit-tip-wrapper .exceed-limit-tip .tip-content .tip-text[data-v-e7dc8388]{color:#333}.exceed-limit-tip-wrapper .exceed-limit-tip .tip-content .upgrade-btn[data-v-e7dc8388]{border-bottom:1px solid rgb(41,98,255);color:#2962ff;font-weight:600;font-size:12px;cursor:pointer}.exceed-limit-tip-wrapper .exceed-limit-tip .tip-content .upgrade-btn[data-v-e7dc8388]:hover{opacity:.8}.exceed-limit-tip-wrapper .exceed-limit-tip .tip-content .upgrade-btn[data-v-e7dc8388]:active,.exceed-limit-tip-wrapper .exceed-limit-tip .tip-content .upgrade-btn.active[data-v-e7dc8388]{color:#1c4eda;opacity:1}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow[data-v-e7dc8388]{position:absolute;width:0;height:0}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow[data-v-e7dc8388]:after{content:"";position:absolute;width:0;height:0}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]{bottom:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:5px solid #4a9eff}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]{left:50%;transform:translate(-50%)}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]{right:50%;transform:translate(50%)}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]:after{top:-6px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:4px solid white}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]:after{left:-5px}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-bottom[data-v-e7dc8388]:after{right:-5px}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]{top:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:5px solid #4a9eff}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]{left:50%;transform:translate(-50%)}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]{right:50%;transform:translate(50%)}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]:after{bottom:-6px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:4px solid white}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]:after{left:-5px}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-top[data-v-e7dc8388]:after{right:-5px}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]{right:-5px;border-left:5px solid #4a9eff}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]{left:-5px;border-right:5px solid #4a9eff}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]:after{top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]:after{left:-6px;border-left:4px solid white}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-right[data-v-e7dc8388]:after{right:-6px;border-right:4px solid white}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]{left:-5px;border-right:5px solid #4a9eff}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]{right:-5px;border-left:5px solid #4a9eff}.exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]:after{top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]:after{right:-6px;border-right:4px solid white}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .arrow.arrow-left[data-v-e7dc8388]:after{left:-6px;border-left:4px solid white}.exceed-limit-tip-wrapper .exceed-limit-tip .icon-close[data-v-e7dc8388]{position:absolute;top:6px;cursor:pointer}[dir=ltr] .exceed-limit-tip-wrapper .exceed-limit-tip .icon-close[data-v-e7dc8388]{right:6px}[dir=rtl] .exceed-limit-tip-wrapper .exceed-limit-tip .icon-close[data-v-e7dc8388]{left:6px}.language-same-tip-wrapper[data-v-df35f72e]{position:relative}.language-same-tip[data-v-df35f72e]{position:relative;border-radius:6px;background:#353b39;color:#fff;font-size:12px;line-height:1.5}[dir=ltr] .language-same-tip[data-v-df35f72e]{padding:10px 32px 10px 16px}[dir=rtl] .language-same-tip[data-v-df35f72e]{padding:10px 16px 10px 32px}.language-same-tip .tip-content[data-v-df35f72e]{white-space:normal;word-break:break-word}.language-same-tip .tip-content .switch-language[data-v-df35f72e]{cursor:pointer;text-decoration:underline}.language-same-tip .icon-close[data-v-df35f72e]{position:absolute;top:8px;line-height:0;cursor:pointer}[dir=ltr] .language-same-tip .icon-close[data-v-df35f72e]{right:8px}[dir=rtl] .language-same-tip .icon-close[data-v-df35f72e]{left:8px}.language-same-tip .icon-close[data-v-df35f72e] .icon .svg path{stroke:#fff9!important}.language-same-tip .icon-close[data-v-df35f72e] .icon-button:hover,.language-same-tip .icon-close[data-v-df35f72e] .icon-button:active,.language-same-tip .icon-close[data-v-df35f72e] .icon-button.active,.language-same-tip .icon-close[data-v-df35f72e] .icon-button:focus{background:transparent!important}.language-same-tip .arrow[data-v-df35f72e]{position:absolute;width:0;height:0}.language-same-tip .arrow.arrow-right[data-v-df35f72e]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .language-same-tip .arrow.arrow-right[data-v-df35f72e]{right:-5px;border-left:5px solid rgb(53,59,57)}[dir=rtl] .language-same-tip .arrow.arrow-right[data-v-df35f72e]{left:-5px;border-right:5px solid rgb(53,59,57)}.language-same-tip .arrow.arrow-left[data-v-df35f72e]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .language-same-tip .arrow.arrow-left[data-v-df35f72e]{left:-5px;border-right:5px solid rgb(53,59,57)}[dir=rtl] .language-same-tip .arrow.arrow-left[data-v-df35f72e]{right:-5px;border-left:5px solid rgb(53,59,57)}.language-same-tip .arrow.arrow-top[data-v-df35f72e]{top:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:5px solid rgb(53,59,57)}[dir=ltr] .language-same-tip .arrow.arrow-top[data-v-df35f72e]{left:50%;transform:translate(-50%)}[dir=rtl] .language-same-tip .arrow.arrow-top[data-v-df35f72e]{right:50%;transform:translate(50%)}.language-same-tip .arrow.arrow-bottom[data-v-df35f72e]{bottom:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:5px solid rgb(53,59,57)}[dir=ltr] .language-same-tip .arrow.arrow-bottom[data-v-df35f72e]{left:50%;transform:translate(-50%)}[dir=rtl] .language-same-tip .arrow.arrow-bottom[data-v-df35f72e]{right:50%;transform:translate(50%)}.model-list[data-v-3daa8642]{width:100%;margin-bottom:8px;margin-top:10px}.model-list .login-prompt[data-v-3daa8642]{margin-top:8px;cursor:pointer;padding:0 16px}.model-list .login-prompt .login-prompt-content[data-v-3daa8642]{background:#366cff1a;border-radius:6px;padding:7px 0;text-align:center}.model-list .login-prompt .login-prompt-content .login-prompt-text[data-v-3daa8642]{font-weight:600;font-size:12px;line-height:150%;color:#2962ff}.model-list .section-title[data-v-3daa8642]{padding:0 16px;margin-bottom:8px;display:flex;align-items:center;gap:8px;font-weight:600;font-size:12px;line-height:16px;color:#000000e6}.model-list .model-group .model-item[data-v-3daa8642]{display:flex;justify-content:space-between;align-items:center;height:44px;padding:0 16px;cursor:pointer;color:#000000e6}.model-list .model-group .model-item.selected[data-v-3daa8642],.model-list .model-group .model-item[data-v-3daa8642]:hover{color:#2962ff}.model-list .model-group .model-item .model-info[data-v-3daa8642]{display:flex;align-items:center;gap:8px}.model-list .model-group .model-item .model-icon[data-v-3daa8642]{width:20px;height:20px;flex-shrink:0}.model-list .model-group .model-item .model-name[data-v-3daa8642]{font-weight:400;font-size:14px}.model-list .model-group .model-item .tag-icon[data-v-3daa8642]{height:16px;width:auto}.model-service-select[data-v-2bcb9f51]{position:relative;-webkit-user-select:none;user-select:none}.model-service-select .select-input[data-v-2bcb9f51]{position:relative;display:flex;align-items:center;justify-content:space-between;height:42px;padding:0 16px;cursor:pointer;background-color:#f7f7f7;border:1px solid rgb(224,224,224);border-radius:48px}.model-service-select .select-input[data-v-2bcb9f51]:hover{border-color:#a7a7a7}.model-service-select .select-input[data-v-2bcb9f51]:active,.model-service-select .select-input.active[data-v-2bcb9f51]{background-color:#eff3ff;border-color:#2962ff}.model-service-select .select-input[disabled][data-v-2bcb9f51],.model-service-select .select-input.disabled[data-v-2bcb9f51]{outline:none;opacity:.4}.model-service-select .select-input[disabled][data-v-2bcb9f51]:hover,.model-service-select .select-input[disabled][data-v-2bcb9f51]:active,.model-service-select .select-input.disabled[data-v-2bcb9f51]:hover,.model-service-select .select-input.disabled[data-v-2bcb9f51]:active{background-color:transparent}.model-service-select .select-input .select-label[data-v-2bcb9f51]{font-size:14px;opacity:.6;color:#000}[dir=ltr] .model-service-select .select-input .select-label[data-v-2bcb9f51]{margin-right:8px}[dir=rtl] .model-service-select .select-input .select-label[data-v-2bcb9f51]{margin-left:8px}[dir=ltr] .model-service-select .select-input .select-icon[data-v-2bcb9f51]{margin-right:4px}[dir=rtl] .model-service-select .select-input .select-icon[data-v-2bcb9f51]{margin-left:4px}.model-service-select .select-input .select-text[data-v-2bcb9f51]{flex:1;font-weight:500;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}[dir=ltr] .model-service-select .select-input .select-text[data-v-2bcb9f51]{text-align:left}[dir=rtl] .model-service-select .select-input .select-text[data-v-2bcb9f51]{text-align:right}[dir=ltr] .model-service-select .select-input.active .select-arrow[data-v-2bcb9f51]{transform:rotate(180deg)}[dir=rtl] .model-service-select .select-input.active .select-arrow[data-v-2bcb9f51]{transform:rotate(-180deg)}.model-service-select .select-input .select-arrow[data-v-2bcb9f51]{transition:transform .2s ease-in-out}.model-service-select .select-popup[data-v-2bcb9f51]{display:flex;width:250px;border-radius:12px;border:1px solid rgba(46,50,60,.1);box-shadow:0 64px 24px #313a3703}.model-service-select .service-icon[data-v-2bcb9f51]{width:22px;height:22px;background-size:contain;background-repeat:no-repeat}.search-input[data-v-adb5b7ba]{position:relative}.search-input.search-input-active .icon-search[data-v-adb5b7ba],.search-input.search-input-active .icon-loading[data-v-adb5b7ba]{opacity:1}.search-input.search-input-error .search-input-item[data-v-adb5b7ba]{outline:none;border-color:#d43d38;box-shadow:none}.search-input.search-input-error .search-input-item[data-v-adb5b7ba]:active,.search-input.search-input-error .search-input-item[data-v-adb5b7ba]:focus{border-color:#d43d38}.search-input .search-input-item[data-v-adb5b7ba]{width:100%;height:36px;padding-inline:56px 36px;color:#000;background-color:#fff;border:1px solid rgb(224,224,224);border-radius:48px}.search-input .search-input-item[data-v-adb5b7ba]:hover{border-color:#a7a7a7}.search-input .search-input-item[data-v-adb5b7ba]:active,.search-input .search-input-item[data-v-adb5b7ba]:focus{outline:none;border-color:#2962ff;box-shadow:none}.search-input .search-input-item[data-v-adb5b7ba]::input-placeholder{font-size:12px;line-height:14px;color:#0d0d0d75}.search-input .icon-search[data-v-adb5b7ba],.search-input .icon-close[data-v-adb5b7ba]{position:absolute;inset-block-start:8px;z-index:1}.search-input .icon-search[data-v-adb5b7ba]{inset-inline-start:24px}.search-input .icon-close[data-v-adb5b7ba]{inset-inline-end:16px;cursor:pointer;opacity:.6}.search-input .icon-close[data-v-adb5b7ba]:hover{opacity:1}.language-select-container .select-subtext[data-v-e55c47e1]{display:inline-block;margin-inline-start:4px;font-size:14px;font-weight:400;color:#000;opacity:.6}.language-select-container .select-subtext.select-subtext-prefix[data-v-e55c47e1]{margin-inline-end:8px}.language-select-container .language-select-icon[data-v-e55c47e1]{width:24px;height:24px;display:flex;align-items:center;justify-content:center;background-color:#2962ff;border-radius:50%}.language-select-container .search-input[data-v-e55c47e1]{margin:0 24px 8px}.language-select-container[data-v-e55c47e1] .select-label{font-weight:400;font-size:12px}.language-select-container[data-v-e55c47e1] .select-options .option-list .option{height:62px;padding-block:12px}.language-select-container[data-v-e55c47e1] .select-options .option-list .selected .selected-icon{display:block}.language-select-container[data-v-e55c47e1] .select-options .option-list .selected .language-label{font-weight:500;color:#2962ff}.language-select-container .selected-icon[data-v-e55c47e1]{position:absolute;inset-inline-start:30px;top:50%;display:none;transform:translateY(-50%)}.language-select-container .language-option[data-v-e55c47e1]{display:flex;flex-direction:column;gap:8px;width:198px}.language-select-container .language-option .language-label[data-v-e55c47e1]{font-size:14px;color:#333}.language-select-container .language-option .language-name[data-v-e55c47e1]{font-size:12px;color:#636363}.native-language-select-container[data-v-c981ab98]{position:relative;display:flex;gap:8px;width:100%;align-items:center;justify-content:space-between;height:42px;padding:0 16px;background-color:#f7f7f7;border:1px solid rgb(224,224,224);border-radius:48px;cursor:pointer}.native-language-select-container[data-v-c981ab98]:hover{border-color:#a7a7a7}.native-language-select-container[data-v-c981ab98]:active,.native-language-select-container.active[data-v-c981ab98]{background-color:#eff3ff;border-color:#2962ff}.native-language-select-container[disabled][data-v-c981ab98],.native-language-select-container.disabled[data-v-c981ab98]{outline:none;opacity:.4}.native-language-select-container[disabled][data-v-c981ab98]:hover,.native-language-select-container[disabled][data-v-c981ab98]:active,.native-language-select-container.disabled[data-v-c981ab98]:hover,.native-language-select-container.disabled[data-v-c981ab98]:active{background-color:transparent}.native-language-select-container .native-language-select-label[data-v-c981ab98]{font-size:14px;opacity:.6;color:#000}.native-language-select-container .native-language-text[data-v-c981ab98]{flex:1;font-size:14px;color:#000;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.native-language-select-container .language-select-input[data-v-c981ab98]{cursor:pointer;position:absolute;background-color:transparent;-webkit-appearance:none;-moz-appearance:none;appearance:none;outline:none;box-shadow:none;border:none;opacity:0;flex:1;top:0;left:0;right:0;bottom:0;border-radius:48px;color:#000;font-size:14px}[dir=ltr] .native-language-select-container .language-select-input[data-v-c981ab98]{padding-left:12px}[dir=rtl] .native-language-select-container .language-select-input[data-v-c981ab98]{padding-right:12px}[dir=ltr] .native-language-select-container.active .select-arrow[data-v-c981ab98]{transform:rotate(180deg)}[dir=rtl] .native-language-select-container.active .select-arrow[data-v-c981ab98]{transform:rotate(-180deg)}.native-language-select-container .select-arrow[data-v-c981ab98]{transition:transform .2s ease-in-out}.common-switch[data-v-b6743f25]{position:relative;display:inline-block;width:28px;height:16px;vertical-align:middle;cursor:pointer;background-color:#f7f7f7;border:1px solid rgb(224,224,224);border-radius:48px;transition:background-color .2s}.common-switch.switch-on[data-v-b6743f25]{background-color:#fff}.common-switch .switch-ball[data-v-b6743f25]{position:absolute;top:2px;display:inline-block;width:10px;height:10px;background-color:#949494;border-radius:50%;transition:all .1s}[dir=ltr] .common-switch .switch-ball[data-v-b6743f25]{left:2px}[dir=rtl] .common-switch .switch-ball[data-v-b6743f25]{right:2px}.switch-on .switch-ball[data-v-b6743f25]{background-color:#2962ff}[dir=ltr] .switch-on .switch-ball[data-v-b6743f25]{left:14px}[dir=rtl] .switch-on .switch-ball[data-v-b6743f25]{right:14px}</style><style>@charset "UTF-8";.continue-translate-dialog[data-v-8c0574a2]{position:fixed;z-index:2147483647;bottom:32px;width:348px;padding:24px;font-weight:400;background-color:#fff;color:#000;border:1px solid rgb(224,224,224);border-radius:16px;box-shadow:0 12px 24px #00000014}[dir=ltr] .continue-translate-dialog[data-v-8c0574a2]{right:32px}[dir=rtl] .continue-translate-dialog[data-v-8c0574a2]{left:32px}.continue-translate-dialog .dialog-header[data-v-8c0574a2]{display:flex;gap:12px;align-items:center;margin-bottom:16px}.continue-translate-dialog .dialog-header .header-logo[data-v-8c0574a2]{display:flex;flex:1;align-items:center;gap:12px}.continue-translate-dialog .dialog-header .header-logo .logo-icon[data-v-8c0574a2]{height:24px;width:24px;border-radius:6px}.continue-translate-dialog .dialog-header .header-logo .logo-name[data-v-8c0574a2]{font-weight:600;font-size:16px;line-height:24px}.continue-translate-dialog .dialog-content[data-v-8c0574a2]{margin-bottom:20px}.continue-translate-dialog .dialog-content .description[data-v-8c0574a2]{font-size:14px;line-height:20px;color:#000000e6;margin:0 0 16px}.continue-translate-dialog .dialog-content .duration-selector[data-v-8c0574a2]{display:flex;align-items:center;justify-content:space-between;gap:16px}.continue-translate-dialog .dialog-content .duration-selector .duration-label[data-v-8c0574a2]{font-size:14px;font-weight:500;line-height:20px;color:#000}.continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2]{flex:1;min-width:160px;-webkit-user-select:none;user-select:none}.continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-input{border-radius:8px}[dir=ltr] .continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-input{padding-left:12px}[dir=rtl] .continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-input{padding-right:12px}[dir=ltr] .continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-input .select-label{text-align:right}[dir=rtl] .continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-input .select-label{text-align:left}.continue-translate-dialog .dialog-content .duration-selector .duration-select[data-v-8c0574a2] .select-options{height:fit-content;border-radius:8px}.continue-translate-dialog .dialog-footer .confirm-btn[data-v-8c0574a2]{height:48px;border-radius:12px;font-size:16px;font-weight:600}.hover-ball-onboarding-container[data-v-e0b307f8]{position:absolute;display:flex;flex-direction:column;bottom:-30px;border-radius:12px;background-color:#fff;width:300px;border:1px solid rgb(224,224,224);box-shadow:0 12px 32px #00000014;transition:none}.hover-ball-onboarding-container .hover-ball-onboarding-close[data-v-e0b307f8]{position:absolute;top:8px}[dir=ltr] .hover-ball-onboarding-container .hover-ball-onboarding-close[data-v-e0b307f8]{right:8px}[dir=rtl] .hover-ball-onboarding-container .hover-ball-onboarding-close[data-v-e0b307f8]{left:8px}.hover-ball-onboarding-container .hover-ball-onboarding-image[data-v-e0b307f8]{height:180px;border-radius:12px 12px 0 0;background-repeat:no-repeat;background-position:center;background-size:contain}.hover-ball-onboarding-container .hover-ball-onboarding-content[data-v-e0b307f8]{margin:16px 20px}.hover-ball-onboarding-container .hover-ball-onboarding-content .hover-ball-onboarding-title[data-v-e0b307f8]{font-weight:500;font-size:16px;line-height:24px;text-align:center;color:#000000e6}.hover-ball-onboarding-container .hover-ball-onboarding-content .hover-ball-onboarding-desc[data-v-e0b307f8]{font-weight:400;font-size:14px;line-height:22px;text-align:center;color:#333333e6;margin-top:8px}.hover-ball-onboarding-container .hover-ball-onboarding-content .hover-ball-onboarding-button[data-v-e0b307f8]{margin-top:24px}.onetap-login-tip[data-v-2a3e1960]{position:relative;min-width:320px;background:#fff;border:1px solid rgb(224,224,224);border-radius:16px;padding:20px 24px 8px;font-weight:400;font-size:14px;cursor:auto;text-shadow:none;box-shadow:0 12px 32px #00000014}.title[data-v-2a3e1960]{line-height:20px;color:#000000e6}.description[data-v-2a3e1960]{display:flex;align-items:center;margin-bottom:16px;line-height:20px;gap:4px}.description-text[data-v-2a3e1960]{color:#0009}.brand-container[data-v-2a3e1960]{display:flex;align-items:center;gap:4px}.brand-icon[data-v-2a3e1960]{width:16px;height:16px}.brand-text[data-v-2a3e1960]{color:#000000e6}.login-button[data-v-2a3e1960]{display:flex;align-items:center;border-radius:8px;padding:12px;gap:8px;cursor:pointer;white-space:nowrap;color:#000000e6}.login-button[data-v-2a3e1960]:hover{background:#f7f7f7}.login-button[data-v-2a3e1960]:active,.login-button.active[data-v-2a3e1960]{background:#e0e0e0}.login-button .login-button-text[data-v-2a3e1960]{flex:1}.login-button .login-button-icon[data-v-2a3e1960]{width:24px;height:24px}.google-login[data-v-2a3e1960]{border:1px solid rgb(218,218,218);font-weight:600;margin-bottom:4px}[data-v-2a3e1960] .icon-button{width:24px;height:24px}.confirm-container[data-v-0721e387]{display:flex;position:relative;z-index:1;flex-direction:column;width:258px;border-radius:12px;border:1px solid rgb(224,224,224);background-color:#fff;box-shadow:0 12px 32px #00000014;cursor:default;-webkit-user-select:select;user-select:select;padding-top:8px;padding-bottom:16px}.confirm-container .confirm-header[data-v-0721e387]{display:flex;justify-content:space-between;align-items:center}[dir=ltr] .confirm-container .confirm-header[data-v-0721e387]{padding-left:24px;padding-right:8px}[dir=rtl] .confirm-container .confirm-header[data-v-0721e387]{padding-right:24px;padding-left:8px}.confirm-container .confirm-header .title[data-v-0721e387]{font-weight:500;font-size:12px;color:#000;opacity:.9}.confirm-container .confirm-content[data-v-0721e387]{display:flex;flex:1;flex-direction:column;gap:10;font-weight:400;font-size:12px;color:#333;margin-top:14px;margin-bottom:12px}[dir=ltr] .confirm-container .confirm-content[data-v-0721e387]{padding-left:24px;padding-right:16px}[dir=rtl] .confirm-container .confirm-content[data-v-0721e387]{padding-right:24px;padding-left:16px}.confirm-container .confirm-content[data-v-0721e387] .base-radio{flex-direction:column;align-items:start}.confirm-container .confirm-content[data-v-0721e387] .base-radio .radio-container .radio{width:12px;height:12px}.confirm-container .confirm-content[data-v-0721e387] .base-radio .radio-container .radio.checked:after{width:8px;height:8px;margin:1px}.confirm-container .confirm-content .settings-can-be-re-enable[data-v-0721e387]{font-size:12px;color:#0009;margin-top:16px}.confirm-container .confirm-content .settings-can-be-re-enable .settings-can-be-re-enable-link[data-v-0721e387]{cursor:pointer;-webkit-user-select:none;user-select:none;font-size:12px;font-weight:600;color:#2962ff}.confirm-container .confirm-content .settings-can-be-re-enable .settings-can-be-re-enable-link[data-v-0721e387]:hover{opacity:.8}.confirm-container .confirm-content .settings-can-be-re-enable .settings-can-be-re-enable-link[data-v-0721e387]:active,.confirm-container .confirm-content .settings-can-be-re-enable .settings-can-be-re-enable-link.active[data-v-0721e387]{color:#1c4eda;opacity:1}.confirm-container .confirm-footer[data-v-0721e387]{display:flex;justify-content:flex-end}[dir=ltr] .confirm-container .confirm-footer[data-v-0721e387]{padding-right:16px}[dir=rtl] .confirm-container .confirm-footer[data-v-0721e387]{padding-left:16px}.confirm-container .confirm-footer .confirm-button[data-v-0721e387]{height:32px;border-radius:8px;font-size:12px;line-height:100%}.hover-ball-container[data-v-2589c71a]{position:fixed;z-index:2147483647;width:36px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;-webkit-user-select:none;user-select:none}.hover-ball-container .gift-ball-container[data-v-2589c71a]{display:flex;justify-content:center;align-items:center;cursor:pointer;width:36px;height:36px;background:#fff;border-radius:24px;margin-bottom:4px;border:1px solid rgba(151,151,151,.14);box-shadow:0 10px 16px #00000014}.hover-ball-container .gift-ball-container .gift-image[data-v-2589c71a]{width:18px;height:18px;background-size:cover}.hover-ball-container .actionContainer[data-v-2589c71a]{display:flex;height:38px;transition:none;rotate:-90deg;overflow:hidden;width:100%;align-items:center;flex-direction:column;padding:4px;background:#fff;border-top-left-radius:24px;border-top-right-radius:24px;border:1px solid;border-image-source:linear-gradient(266.36deg,rgba(224,224,224,.48) -8.57%,rgba(151,151,151,.14) 101.08%);box-shadow:0 10px 16px #00000014}.hover-ball-container .actionContainer .translateIcon[data-v-2589c71a]{display:flex;justify-content:center;align-items:center;cursor:pointer;width:28px;height:28px;border-radius:24px 24px 4px 4px;opacity:.5;background:radial-gradient(50.36% 54.17% at 43.75% 45.83%,#448cff,#4574f6 35.33%,#0e4eff 86.17%)}.hover-ball-container .actionContainer .otherIcons[data-v-2589c71a]{height:0px;transition:none;display:flex;gap:2px;flex-direction:column}.hover-ball-container .actionContainer .red-hot[data-v-2589c71a]{position:absolute;top:2px;width:4px;height:4px;border-radius:50%;background:#ff6c52}.hover-ball-container.hover .actionContainer[data-v-2589c71a]{rotate:0deg;height:156px;transition:height .1s ease;border-radius:24px;padding:3px 3px 7px}.hover-ball-container.hover .actionContainer .otherIcons[data-v-2589c71a]{transition:height .1s ease,margin-top .2s ease;height:110px;margin-top:6px}.hover-ball-container.hover .translateIcon[data-v-2589c71a]{opacity:1;background:radial-gradient(50.36% 54.17% at 43.75% 45.83%,#448cff,#4574f6 35.33%,#0e4eff 86.17%)}.hover-ball-container.hover .translateIcon[data-v-2589c71a]:active{opacity:1;background:#1c4eda}.hover-ball-container .closeIcon[data-v-2589c71a]{cursor:pointer;margin-top:6px;width:16px;height:16px}.hover-ball-container .successIcon[data-v-2589c71a],.hover-ball-container .hover-ball-close-second-confirm[data-v-2589c71a]{position:absolute}[dir=ltr] .hover-ball-container .hover-ball-close-second-confirm[data-v-2589c71a]{right:calc(100% - 4px);transition:right .2s ease}[dir=rtl] .hover-ball-container .hover-ball-close-second-confirm[data-v-2589c71a]{left:calc(100% - 4px);transition:left .2s ease}.hover-ball-container .login-tip-container[data-v-2589c71a]{position:absolute;top:0}.message-tip[data-v-2589c71a]{position:fixed;z-index:999}.hover-ball-tips[data-v-2589c71a]{position:fixed;z-index:2147483647;color:#fff;font-size:12px;line-height:16px;border-radius:8px;font-weight:400;padding:8px 12px;background-color:#000;border:1px solid rgb(54,54,54);box-shadow:0 12px 32px #00000014}.translate-setting-container[data-v-7bfa76da]{display:inline-flex;position:absolute;z-index:1;flex-direction:column;border-radius:12px;border:1px solid rgb(224,224,224);background-color:#fff;box-shadow:0 12px 32px #00000014;cursor:default;width:fit-content;-webkit-user-select:none;user-select:none}.translate-setting-container .close-button[data-v-7bfa76da]{position:absolute;top:12px}[dir=ltr] .translate-setting-container .close-button[data-v-7bfa76da]{right:12px}[dir=rtl] .translate-setting-container .close-button[data-v-7bfa76da]{left:12px}.translate-setting-container .setting-content[data-v-7bfa76da]{display:flex;flex-direction:column;padding:16px 16px 12px;gap:16px;border-bottom:1px solid rgba(46,60,53,.1)}.translate-setting-container .setting-content .setting-section .setting-section-label[data-v-7bfa76da]{font-size:16px;color:#000000e6;font-weight:600;line-height:16px;margin-bottom:8px}.translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input{height:40px;width:220px;gap:6px}[dir=ltr] .translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input{padding-left:16px}[dir=rtl] .translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input{padding-right:16px}.translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input .select-label{color:#000;font-weight:400;font-size:14px}[dir=ltr] .translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input .service-icon{margin-right:0}[dir=rtl] .translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input .service-icon{margin-left:0}.translate-setting-container .setting-content .setting-section[data-v-7bfa76da] .select-input .select-text{color:#000;font-weight:400;font-size:14px}.translate-setting-container .setting-footer[data-v-7bfa76da]{display:flex;padding:12px 16px 16px}.translate-setting-container .setting-footer .more-setting-link[data-v-7bfa76da]{color:#2962ff;font-size:14px;font-weight:400;cursor:pointer;border-bottom:1px solid rgb(41,98,255)}.translate-setting-container .setting-footer .more-setting-link[data-v-7bfa76da]:hover{opacity:.8}.translate-setting-container .setting-footer .more-setting-link[data-v-7bfa76da]:active,.translate-setting-container .setting-footer .more-setting-link.active[data-v-7bfa76da]{color:#1c4eda;opacity:1}.input-translate-ball-container[data-v-4c03dc5a]{position:fixed;z-index:2147483647;pointer-events:none}.input-translate-ball-container .input-translate-ball-content[data-v-4c03dc5a]{position:absolute;bottom:0;pointer-events:all;overflow:hidden;padding:2px;width:32px;height:32px;transition:width .2s ease;border-radius:24px;background:#fff;border:1px solid;border-image-source:linear-gradient(266.36deg,rgba(224,224,224,.48) -8.57%,rgba(151,151,151,.14) 101.08%);box-shadow:0 10px 16px #00000014;white-space:nowrap}.input-translate-ball-container .input-translate-ball-content.ball-content-small[data-v-4c03dc5a]{border:none;box-shadow:none;background:transparent}.input-translate-ball-container .input-translate-ball-content .input-translate-ball-small-icon[data-v-4c03dc5a]{width:10px;height:10px;background:#353842;border:1px solid rgb(255,255,255);position:absolute;top:11px;border-radius:50%}.input-translate-ball-container .input-translate-ball-content .translateIcon[data-v-4c03dc5a]{position:relative;display:inline-flex;justify-content:center;align-items:center;cursor:pointer;width:26px;height:26px;border-radius:14px;background:#353842}.input-translate-ball-container .input-translate-ball-content .translateIcon[data-v-4c03dc5a]:hover{background:#353842}.input-translate-ball-container .input-translate-ball-content .translateIcon[data-v-4c03dc5a]:active{opacity:1;background:#212329}.input-translate-ball-container .input-translate-ball-content .translateIcon.translating[data-v-4c03dc5a]{display:flex}.input-translate-ball-container .input-translate-ball-content .translateIcon .translate-loading-icon[data-v-4c03dc5a]{animation:rotate 1s linear infinite}.input-translate-ball-container .input-translate-ball-content .otherIcons[data-v-4c03dc5a]{display:inline-flex;transition:opacity .2s ease}.input-translate-ball-container .input-translate-ball-content .otherIcons[data-v-4c03dc5a] .icon-button{padding:3px}.input-translate-ball-container .input-translate-ball-content.hover[data-v-4c03dc5a]{width:92px}.input-translate-ball-container .input-translate-ball-popup-container[data-v-4c03dc5a]{pointer-events:all}.input-translate-ball-container .input-translate-ball-popup-container .input-translate-ball-popup[data-v-4c03dc5a]{position:absolute}[dir=ltr] .input-translate-ball-container .input-translate-ball-popup-container .input-translate-ball-popup[data-v-4c03dc5a]{right:0}[dir=rtl] .input-translate-ball-container .input-translate-ball-popup-container .input-translate-ball-popup[data-v-4c03dc5a]{left:0}.input-translate-ball-tips[data-v-4c03dc5a]{position:absolute;z-index:2147483647;-webkit-user-select:none;user-select:none;color:#fff;bottom:40px;font-size:12px;line-height:16px;border-radius:8px;font-weight:400;padding:8px 12px;background-color:#000;border:1px solid rgb(54,54,54);box-shadow:0 12px 32px #00000014}.input-translate-ball-tips.error-tips[data-v-4c03dc5a]{bottom:40px}.pdf-banner-container[data-v-c3f257c8]{position:absolute;z-index:2147483647;top:0;left:0;right:0;height:50px;padding-left:60px;padding-right:60px;font-size:16px;display:flex;gap:8px;justify-content:center;align-items:center;background-color:#fff;color:#000000e6;line-height:1.5}.pdf-banner-container .pdf-banner-desc[data-v-c3f257c8]{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.pdf-banner-container .pdf-translate-button[data-v-c3f257c8]{height:32px;border-radius:18px;font-size:14px;font-weight:600;overflow:unset;text-overflow:unset}[dir=ltr] .pdf-banner-container .pdf-translate-button[data-v-c3f257c8]{margin-left:24px}[dir=rtl] .pdf-banner-container .pdf-translate-button[data-v-c3f257c8]{margin-right:24px}.pdf-banner-container .pdf-translate-close[data-v-c3f257c8]{position:absolute;width:60px;display:flex;justify-content:center;align-items:center}[dir=ltr] .pdf-banner-container .pdf-translate-close[data-v-c3f257c8]{right:0}[dir=rtl] .pdf-banner-container .pdf-translate-close[data-v-c3f257c8]{left:0}.pdf-only-translate-button-container[data-v-c3f257c8]{position:absolute;z-index:2147483647;top:12px;justify-content:end}[dir=ltr] .pdf-only-translate-button-container[data-v-c3f257c8]{right:136px}[dir=rtl] .pdf-only-translate-button-container[data-v-c3f257c8]{left:136px}.plugin-comment-guid-container[data-v-fef91c63]{position:fixed;z-index:2147483647;bottom:32px;padding:24px;font-weight:400;background-color:#fff;color:#000;border:1px solid rgb(224,224,224);border-radius:16px;box-shadow:0 12px 24px #00000014}[dir=ltr] .plugin-comment-guid-container[data-v-fef91c63]{right:32px}[dir=rtl] .plugin-comment-guid-container[data-v-fef91c63]{left:32px}.plugin-comment-guid-container .plugin-comment-guid-header[data-v-fef91c63]{display:flex;gap:12px;align-items:center;margin-bottom:24px}.plugin-comment-guid-container .plugin-comment-guid-header .plugin-comment-guid-header-logo[data-v-fef91c63]{display:flex;flex:1;align-items:center;gap:12px}.plugin-comment-guid-container .plugin-comment-guid-header .plugin-comment-guid-header-logo .plugin-comment-logo-name[data-v-fef91c63]{font-weight:600;font-size:16px}.plugin-comment-guid-container .plugin-comment-five-star[data-v-fef91c63]{display:flex;flex-direction:column;align-items:center;margin-bottom:8px}.plugin-comment-guid-container .plugin-comment-dec-container[data-v-fef91c63]{display:flex;justify-content:center}.plugin-comment-guid-container .plugin-comment-dec-container .plugin-comment-dec[data-v-fef91c63]{max-width:300px;text-align:center;font-size:14px;line-height:1.5}.plugin-comment-guid-container .plugin-comment-btn-container[data-v-fef91c63]{display:flex;justify-content:center}.plugin-comment-guid-container .plugin-comment-btn-container .plugin-comment-btn[data-v-fef91c63]{width:284px;height:48px;border-radius:12px;margin:32px 8px 8px}.dialog-mask[data-v-eca39056]{position:fixed;top:0;width:100%;height:100%;background:#0009;z-index:2147483646}[dir=ltr] .dialog-mask[data-v-eca39056]{left:0}[dir=rtl] .dialog-mask[data-v-eca39056]{right:0}.confirm-dialog[data-v-eca39056]{position:fixed;top:50%;padding:16px 24px 24px;background:#fff;border-radius:16px;border:1px solid rgb(224,224,224);box-shadow:0 12px 32px #00000014;overflow:hidden;display:flex;flex-direction:column;z-index:2147483647}[dir=ltr] .confirm-dialog[data-v-eca39056]{left:50%;transform:translate(-50%,-50%)}[dir=rtl] .confirm-dialog[data-v-eca39056]{right:50%;transform:translate(50%,-50%)}.dialog-header[data-v-eca39056]{display:flex;align-items:center;justify-content:space-between}.dialog-header .dialog-title[data-v-eca39056]{font-size:14px;font-weight:700;color:#000000e6}.dialog-content[data-v-eca39056]{flex:1;margin-top:12px}.dialog-content .dialog-body[data-v-eca39056]{margin-bottom:24px}.dialog-content .dialog-body p[data-v-eca39056]{margin:0;line-height:1.5;color:#0d0d0de6;font-size:14px}.dialog-content .dialog-actions[data-v-eca39056]{display:flex;justify-content:flex-end;gap:12px}.dialog-content .dialog-actions .btn-cancel[data-v-eca39056]{background:#0d0d0d1a;border-radius:8px;padding:8px 12px;color:#0d0d0de6;font-size:12px;font-weight:600;cursor:pointer;-webkit-user-select:none;user-select:none;transition:background-color .2s}.dialog-content .dialog-actions .btn-cancel[data-v-eca39056]:hover{background:#0d0d0d26}.dialog-content .dialog-actions .colorful-confirm-btn[data-v-eca39056]{background:radial-gradient(67.24% 88.54% at 52.67% 100%,#5adeff,#2986ff);color:#fff;font-size:12px;font-weight:600}.dialog-content .dialog-actions .colorful-confirm-btn[data-v-eca39056]:hover{opacity:.9}.upgrade-dialog-overlay[data-v-73213492]{position:fixed;top:0;left:0;right:0;bottom:0;background:transparent;display:flex;align-items:flex-start;justify-content:flex-start;z-index:2147483647;overflow:auto;padding:20px}.upgrade-dialog-overlay.with-mask[data-v-73213492]{background:#0009}.upgrade-dialog[data-v-73213492]{position:relative;height:480px;background:#fff;border-radius:24px;box-shadow:0 12px 32px #00000014;margin:auto}.dialog-close[data-v-73213492]{width:16px;height:16px;position:absolute;cursor:pointer;background-repeat:no-repeat;background-position:center;background-size:contain}[dir=ltr] .dialog-close[data-v-73213492]{right:-20px}[dir=rtl] .dialog-close[data-v-73213492]{left:-20px}.dialog-content[data-v-73213492]{display:flex;height:100%}.content-left[data-v-73213492]{width:456px;padding:48px;display:flex;flex-direction:column;justify-content:center}.dialog-title[data-v-73213492]{font-size:20px;font-weight:600;margin-bottom:24px;color:#000}.features-list[data-v-73213492]{display:flex;flex-direction:column;gap:12px;margin-bottom:60px}.feature-item[data-v-73213492]{display:flex;align-items:center;gap:8px}.check-icon[data-v-73213492]{color:#2962ff;flex-shrink:0}.feature-text[data-v-73213492]{font-size:14px;font-weight:500;line-height:1.5;color:#000}.feature-text.highlight[data-v-73213492]{color:#2962ff}.upgrade-button[data-v-73213492]{font-weight:500;font-size:16px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:12px;cursor:pointer;color:#fff;background:radial-gradient(67.24% 88.54% at 52.67% 100%,#5adeff,#2986ff)}.content-right[data-v-73213492]{display:flex;align-items:center;justify-content:center}.upgrade-image[data-v-73213492]{width:480px;height:100%;background-repeat:no-repeat;background-position:center;background-size:contain}.explain-not-support-container[data-v-ea13e918]{border-top:1px solid rgb(236,236,236);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;padding:24px}.explain-not-support-container .explain-not-support-text[data-v-ea13e918]{line-height:16px;font-size:12px;text-align:center;color:#333}.explain-not-support-container .explain-not-support-switch[data-v-ea13e918]{display:flex;justify-content:center;align-items:center;cursor:pointer;-webkit-user-select:none;user-select:none;gap:4px}.explain-not-support-container .explain-not-support-switch span[data-v-ea13e918]{font-size:12px;color:#2962ff}.blink-loading-container[data-v-8472255d]{display:inline-flex;gap:4px;width:20px}.blink-loading-circle[data-v-8472255d]{width:4px;height:4px;border-radius:50%;background-color:#000;animation:blink-8472255d 1s linear infinite;opacity:1}@keyframes blink-8472255d{0%,to{opacity:1}50%{opacity:.6}75%{opacity:.3}}.translate-window-explain-container[data-v-81479c45]{max-height:228px;border-top:1px solid rgb(236,236,236);display:flex;flex-direction:column}.translate-window-explain-container .translate-window-explain-error[data-v-81479c45]{display:inline-flex;align-items:center;justify-content:center;padding:16px;font-size:12px;font-weight:400;gap:4px;color:#0009}.translate-window-explain-container .translate-window-explain-error .translate-explain-error-retry[data-v-81479c45]{display:flex;align-items:center;gap:2px;word-break:keep-all;color:#2962ff;cursor:pointer;-webkit-user-select:none;user-select:none}.translate-window-explain-container .translate-window-explain-text[data-v-81479c45]{padding:16px;line-height:1.5;font-size:14px;overflow-y:overlay;color:#333}.translate-window-explain-container .translate-window-explain-footer[data-v-81479c45]{display:flex;justify-content:flex-end;padding-bottom:8px;gap:12px}[dir=ltr] .translate-window-explain-container .translate-window-explain-footer[data-v-81479c45]{padding-right:12px}[dir=rtl] .translate-window-explain-container .translate-window-explain-footer[data-v-81479c45]{padding-left:12px}.translate-window-explain-container .explain-result-copy-container[data-v-81479c45]{position:relative}.translate-window-explain-container .explain-result-copy-container .explain-result-copy-tips[data-v-81479c45]{position:absolute;top:-3px;white-space:nowrap;z-index:2147483647;color:#fff;font-size:12px;line-height:16px;border-radius:8px;font-weight:400;padding:8px 12px;background-color:#000;border:1px solid rgb(54,54,54);box-shadow:0 12px 32px #00000014}[dir=ltr] .translate-window-explain-container .explain-result-copy-container .explain-result-copy-tips[data-v-81479c45]{right:110%}[dir=rtl] .translate-window-explain-container .explain-result-copy-container .explain-result-copy-tips[data-v-81479c45]{left:110%}.translate-window-header[data-v-fa5632b1]{position:relative;display:flex;align-items:center;justify-content:space-between;height:56px;border-bottom:1px solid rgb(236,236,236);font-size:12px;color:#333}[dir=ltr] .translate-window-header[data-v-fa5632b1]{padding-left:16px;padding-right:12px}[dir=rtl] .translate-window-header[data-v-fa5632b1]{padding-right:16px;padding-left:12px}.translate-window-header .header-left[data-v-fa5632b1]{display:flex;flex:1;gap:12px}.translate-window-header .header-left[data-v-fa5632b1] .select-input{height:32px}[dir=ltr] .translate-window-header .header-left[data-v-fa5632b1] .select-input{padding-left:4px;padding-right:10px}[dir=rtl] .translate-window-header .header-left[data-v-fa5632b1] .select-input{padding-right:4px;padding-left:10px}.translate-window-header .header-left[data-v-fa5632b1] .select-input .select-text{font-size:12px;color:#000;font-weight:400}.translate-window-header .header-left .language-select[data-v-fa5632b1]{cursor:default;width:160px}.translate-window-header .header-left .language-select[data-v-fa5632b1] .select-input{gap:8px}.translate-window-header .header-left .model-select[data-v-fa5632b1]{cursor:default;width:160px}[dir=ltr] .translate-window-header .header-left .model-select[data-v-fa5632b1] .select-input .select-icon.service-icon{margin-right:8px}[dir=rtl] .translate-window-header .header-left .model-select[data-v-fa5632b1] .select-input .select-icon.service-icon{margin-left:8px}.translate-window-header .header-right[data-v-fa5632b1]{display:flex;align-items:center;cursor:default}.translate-window-header .header-right .window-action[data-v-fa5632b1]{display:flex;gap:8px;-webkit-user-select:none;user-select:none}[dir=ltr] .translate-window-header .header-right .window-action[data-v-fa5632b1]{margin-left:12px}[dir=rtl] .translate-window-header .header-right .window-action[data-v-fa5632b1]{margin-right:12px}.translate-window-header .header-right .window-action .window-action-more-list-container[data-v-fa5632b1]{z-index:10;display:flex;flex-direction:column;position:absolute;top:100%}.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-content[data-v-fa5632b1]{margin-top:4px;padding:12px;background:#fff;border:1px solid rgb(224,224,224);border-radius:12px}.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]{cursor:pointer;padding:6px;font-size:14px;border-radius:6px;display:flex;gap:8px;align-items:center}[dir=ltr] .translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]{padding-right:24px}[dir=rtl] .translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]{padding-left:24px}.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]:hover{background:#f0f0f0}.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]:active,.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item[data-v-fa5632b1]:focus{background:#e0e0e0}.translate-window-header .header-right .window-action .window-action-more-list-container .window-action-more-list-item .window-action-more-list-item-content[data-v-fa5632b1]{white-space:nowrap}.translate-window-header .header-right .window-action .window-action-icon[data-v-fa5632b1]{cursor:pointer;width:24px;height:24px;display:flex;padding:4px;border-radius:4px}.translate-window-header .header-right .window-action .window-action-icon[data-v-fa5632b1]:hover{background:#f0f0f0}.translate-window-header .header-right .window-action .window-action-icon[data-v-fa5632b1]:active,.translate-window-header .header-right .window-action .window-action-icon[data-v-fa5632b1]:focus{background:#e0e0e0}.translate-window-header .select-text-close-second-confirm[data-v-fa5632b1]{position:absolute;top:calc(100% - 2px)}[dir=rtl] .to-homepage-icon[data-v-fa5632b1]{rotate:270deg}.translate-window-result-container[data-v-c27f4562]{max-height:485px;padding:16px;font-size:16px;font-weight:400;color:#000;overflow-y:overlay;line-height:1.5}.translate-window-result-container.translate-error[data-v-c27f4562]{display:flex;justify-content:center}.translate-window-result-container .translate-window-result-error[data-v-c27f4562]{display:inline-flex;align-items:center;font-size:12px;gap:4px;font-weight:400;color:#0009}.translate-window-result-container .translate-window-result-error .translate-result-error-retry[data-v-c27f4562]{display:flex;align-items:center;word-break:keep-all;gap:2px;color:#2962ff;cursor:pointer;-webkit-user-select:none;user-select:none}.translate-window-result-container .translate-window-result-more[data-v-c27f4562]{cursor:pointer;color:#2962ff;font-size:14px;-webkit-user-select:none;user-select:none}.translate-window-result-container .upgrade-now-wrapper[data-v-c27f4562]{display:flex;justify-content:center;margin-top:16px}.translate-window-result-container .upgrade-now-wrapper .upgrade-now-btn[data-v-c27f4562]{background:radial-gradient(67.24% 88.54% at 52.67% 100%,#5adeff,#2986ff);border-radius:8px;padding:8px 12px;color:#fff;font-size:12px;font-weight:600;cursor:pointer;-webkit-user-select:none;user-select:none}.translate-window-result-footer[data-v-c27f4562]{height:42px;display:flex;gap:24px;align-items:center;justify-content:space-between}[dir=ltr] .translate-window-result-footer[data-v-c27f4562]{padding-left:20px;padding-right:12px}[dir=rtl] .translate-window-result-footer[data-v-c27f4562]{padding-right:20px;padding-left:12px}.translate-window-result-footer .translate-window-footer-explain[data-v-c27f4562]{display:flex;gap:4px;border-radius:4px;align-items:center;-webkit-user-select:none;user-select:none;cursor:pointer;padding:4px;justify-content:center;line-height:0}.translate-window-result-footer .translate-window-footer-explain span[data-v-c27f4562]{font-size:12px;color:#333}.translate-window-result-footer .translate-window-footer-explain[data-v-c27f4562]:hover{background:#f0f0f0}.translate-window-result-footer .translate-window-footer-explain.active[data-v-c27f4562],.translate-window-result-footer .translate-window-footer-explain[data-v-c27f4562]:active,.translate-window-result-footer .translate-window-footer-explain[data-v-c27f4562]:focus{background:#e0e0e0}.translate-window-result-footer .translate-window-footer-explain.disable[data-v-c27f4562]{cursor:not-allowed;opacity:.6}.translate-window-result-footer .translate-window-footer-explain.disable[data-v-c27f4562]:hover{background:none}.translate-window-result-footer .translate-window-footer-explain.disable[data-v-c27f4562]:active,.translate-window-result-footer .translate-window-footer-explain.disable[data-v-c27f4562]:focus{background:none}.translate-window-result-footer .translate-window-footer-explain .explain-arrow[data-v-c27f4562]{transition:transform .2s ease-in-out}[dir=ltr] .translate-window-result-footer .translate-window-footer-explain.active .explain-arrow[data-v-c27f4562]{transform:rotate(180deg)}[dir=rtl] .translate-window-result-footer .translate-window-footer-explain.active .explain-arrow[data-v-c27f4562]{transform:rotate(-180deg)}.translate-window-result-footer .translate-result-footer-icons[data-v-c27f4562]{display:flex;gap:12px}.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-container[data-v-c27f4562]{position:relative}.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-wrapper[data-v-c27f4562]{display:flex;align-items:center;cursor:pointer;-webkit-user-select:none;user-select:none;gap:4px;padding:4px}.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-wrapper[data-v-c27f4562]:hover{background:#f0f0f0;border-radius:4px}.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-wrapper.active[data-v-c27f4562],.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-wrapper[data-v-c27f4562]:active,.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-wrapper[data-v-c27f4562]:focus{background:#e0e0e0}.translate-window-result-footer .translate-result-footer-icons .translate-result-icon-tip[data-v-c27f4562]{font-size:12px;font-weight:400;color:#333}.translate-window-result-footer .translate-result-footer-icons .red-hot[data-v-c27f4562]{position:absolute;top:2px;width:4px;height:4px;border-radius:50%;background:#ff6c52}[dir=ltr] .translate-window-result-footer .translate-result-footer-icons .red-hot[data-v-c27f4562]{left:20px}[dir=rtl] .translate-window-result-footer .translate-result-footer-icons .red-hot[data-v-c27f4562]{right:20px}.explain-disable-tips[data-v-c27f4562]{position:absolute;bottom:-50px;font-size:12px;padding:12px;line-height:16px;color:#333;background:#fff;border:1px solid rgb(224,224,224);box-shadow:0 12px 32px #00000014;border-radius:8px}[dir=ltr] .explain-disable-tips[data-v-c27f4562]{left:36px}[dir=rtl] .explain-disable-tips[data-v-c27f4562]{right:36px}.translate-window-container[data-v-e71cbca0]{position:fixed;display:flex;z-index:2147483647;border-radius:12px;width:552px;background-color:#fff;border:1px solid rgba(13,13,13,.12);box-shadow:0 12px 32px #0d0d0d14;font-size:16px}.translate-window-container .translate-window-drag-zone[data-v-e71cbca0]{background:#f7f7f7;width:12px;display:flex;align-items:center;justify-content:center;cursor:move}[dir=ltr] .translate-window-container .translate-window-drag-zone[data-v-e71cbca0]{border-top-left-radius:12px;border-bottom-left-radius:12px}[dir=rtl] .translate-window-container .translate-window-drag-zone[data-v-e71cbca0]{border-top-right-radius:12px;border-bottom-right-radius:12px}.translate-window-container .translate-window-content-zone[data-v-e71cbca0]{flex:1;width:calc(100% - 12px);display:flex;flex-direction:column;word-break:normal;overflow-wrap:break-word}.translate-window-container .translate-window-header-wrapper[data-v-e71cbca0]{cursor:move}.word-translate-bubble[data-v-0a1651d0]{position:absolute;display:flex;align-items:center;justify-content:center;border-radius:4px;gap:2px;height:28px;padding-right:6px;padding-left:6px;background:#f7f7f7;z-index:2147483647;border:.5px solid rgb(207,207,207);box-shadow:0 6px 12px #00000014;color:#333;font-size:14px;-webkit-user-select:none;user-select:none;cursor:pointer}.word-translate-bubble .translate-text-sharp-angle[data-v-0a1651d0]{position:absolute;width:4px;height:4px;background:#f7f7f7;border:.5px solid rgb(207,207,207);box-shadow:0 6px 12px #00000014}[dir=ltr] .word-translate-bubble .translate-text-sharp-angle[data-v-0a1651d0]{transform:rotate(45deg)}[dir=rtl] .word-translate-bubble .translate-text-sharp-angle[data-v-0a1651d0]{transform:rotate(-45deg)}.word-translate-bubble .translate-text-sharp-angle.sharp-top[data-v-0a1651d0]{top:-2px;inset-inline-start:10px;border-bottom:none!important}[dir=ltr] .word-translate-bubble .translate-text-sharp-angle.sharp-top[data-v-0a1651d0]{border-right:none!important}[dir=rtl] .word-translate-bubble .translate-text-sharp-angle.sharp-top[data-v-0a1651d0]{border-left:none!important}.word-translate-bubble .translate-text-sharp-angle.sharp-bottom[data-v-0a1651d0]{bottom:-2px;border-top:none!important;inset-inline-end:10px}[dir=ltr] .word-translate-bubble .translate-text-sharp-angle.sharp-bottom[data-v-0a1651d0]{border-left:none!important}[dir=rtl] .word-translate-bubble .translate-text-sharp-angle.sharp-bottom[data-v-0a1651d0]{border-right:none!important}.word-translate-bubble.black-theme[data-v-0a1651d0]{background:#000;color:#fff;border:.5px solid rgb(54,54,54)}.word-translate-bubble.black-theme .translate-text-sharp-angle[data-v-0a1651d0]{background:#000;border:.5px solid rgb(54,54,54)}[dir=rtl] .word-translate-bubble .translate-text-sharp-angle.sharp-top[data-v-0a1651d0]{inset-inline-end:10px;inset-inline-start:unset}[dir=rtl] .word-translate-bubble .translate-text-sharp-angle.sharp-bottom[data-v-0a1651d0]{inset-inline-start:10px;inset-inline-end:unset}.mail-setting-container[data-v-fd8d55fd]{position:relative}.mail-setting-btn[data-v-fd8d55fd]{height:40px;width:50px;display:flex;align-items:center;justify-content:center}.mail-welcome-banner[data-v-fd8d55fd]{position:absolute;top:100%;min-width:360px;background-color:#fff;border:1px solid rgb(224,224,224);border-radius:16px;z-index:2147483647;box-shadow:0 12px 32px #00000014}.banner-content[data-v-fd8d55fd]{padding:20px}.header-section[data-v-fd8d55fd]{position:relative;display:flex;margin-bottom:16px}.title[data-v-fd8d55fd]{flex:1;font-size:14px;font-weight:600;line-height:24px;color:#000000e6}[dir=ltr] .title[data-v-fd8d55fd]{margin-left:6px}[dir=rtl] .title[data-v-fd8d55fd]{margin-right:6px}[dir=ltr] .close-button[data-v-fd8d55fd]{margin-left:4px}[dir=rtl] .close-button[data-v-fd8d55fd]{margin-right:4px}.feature-item[data-v-fd8d55fd]{display:flex;align-items:center;margin-bottom:10px;gap:6px}.feature-item[data-v-fd8d55fd]:last-child{margin-bottom:0}.feature-text[data-v-fd8d55fd]{flex:1;font-size:14px;font-weight:400;color:#0009}.separator[data-v-fd8d55fd]{width:100%;height:1px;background-color:#0000001a}.bottom-section[data-v-fd8d55fd]{display:flex;align-items:center;justify-content:space-between;padding:16px 20px}.enable-text[data-v-fd8d55fd]{font-size:14px;font-weight:400;color:#000000e6}.mail-setting-btn-red-hot[data-v-fd8d55fd]{position:absolute;top:8px;width:4px;height:4px;border-radius:50%;background:#ff6c52}[dir=ltr] .mail-setting-btn-red-hot[data-v-fd8d55fd]{right:8px}[dir=rtl] .mail-setting-btn-red-hot[data-v-fd8d55fd]{left:8px}[data-v-b02d00f3] .base-select .select-options .option-list .option{min-width:260px}.mail-translate-banner-container[data-v-b02d00f3]{position:relative;font-size:14px;font-weight:400;-webkit-user-select:none;user-select:none;padding-bottom:10px}.translate-btn[data-v-b02d00f3]{width:fit-content;display:inline-flex;vertical-align:middle;margin-top:4px;min-width:220px;position:relative;align-items:center;height:40px;cursor:pointer}[dir=ltr] .translate-btn[data-v-b02d00f3]{text-align:left;margin-right:8px}[dir=rtl] .translate-btn[data-v-b02d00f3]{text-align:right;margin-left:8px}.translate-btn .logo-container[data-v-b02d00f3]{flex:1;display:flex;height:100%;gap:8px;align-items:center;justify-content:center;border:1px solid rgb(224,224,224)}[dir=ltr] .translate-btn .logo-container[data-v-b02d00f3]{padding-left:8px;padding-right:16px;border-top-left-radius:48px;border-bottom-left-radius:48px}[dir=rtl] .translate-btn .logo-container[data-v-b02d00f3]{padding-right:8px;padding-left:16px;border-top-right-radius:48px;border-bottom-right-radius:48px}.translate-btn .logo-container .logo[data-v-b02d00f3]{width:24px;height:24px;display:flex;align-items:center;justify-content:center;background-color:#2962ff;border-radius:50%}.translate-btn .logo-container .text-content[data-v-b02d00f3]{flex:1;font-weight:600;color:#2962ff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.translate-btn .logo-container[data-v-b02d00f3]:hover{background-color:#f0f0f0}.translate-btn .logo-container[data-v-b02d00f3]:active,.translate-btn .logo-container.active[data-v-b02d00f3]{background-color:#e0e0e0}.translate-btn .setting-container[data-v-b02d00f3]{display:flex;width:44px;height:100%;align-items:center;justify-content:center;border:1px solid rgb(224,224,224)}[dir=ltr] .translate-btn .setting-container[data-v-b02d00f3]{border-left:none;border-top-right-radius:48px;border-bottom-right-radius:48px}[dir=rtl] .translate-btn .setting-container[data-v-b02d00f3]{border-right:none;border-top-left-radius:48px;border-bottom-left-radius:48px}.translate-btn .setting-container[data-v-b02d00f3]:hover{background-color:#f0f0f0}.translate-btn .setting-container[data-v-b02d00f3]:active,.translate-btn .setting-container.active[data-v-b02d00f3]{background-color:#e0e0e0}.translate-btn .translate-setting-container[data-v-b02d00f3]{position:absolute;top:calc(100% + 8px);z-index:1}[dir=ltr] .translate-btn .translate-setting-container[data-v-b02d00f3]{right:0}[dir=rtl] .translate-btn .translate-setting-container[data-v-b02d00f3]{left:0}.translate-btn .exceed-limit-tip[data-v-b02d00f3]{position:absolute;z-index:1;width:270px;top:calc(100% + 8px)}[dir=ltr] .translate-btn .exceed-limit-tip[data-v-b02d00f3]{right:50%;transform:translate(50%)}[dir=rtl] .translate-btn .exceed-limit-tip[data-v-b02d00f3]{left:50%;transform:translate(-50%)}.send-email-btn[data-v-b02d00f3]{display:inline-flex;vertical-align:middle;width:fit-content;gap:4px;height:40px;margin-top:4px;padding:0 16px;cursor:pointer;align-items:center;border:1px solid rgb(224,224,224);border-radius:48px}[dir=ltr] .send-email-btn[data-v-b02d00f3]{text-align:left;margin-right:8px}[dir=rtl] .send-email-btn[data-v-b02d00f3]{text-align:right;margin-left:8px}.send-email-btn[data-v-b02d00f3]:hover{background-color:#f0f0f0}.send-email-btn[data-v-b02d00f3]:active,.send-email-btn.active[data-v-b02d00f3]{background-color:#e0e0e0}.send-email-btn .send-mail-icon[data-v-b02d00f3]{opacity:.9}.send-email-btn .send-text-content[data-v-b02d00f3]{color:#000;opacity:.9;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.btn-disabled[data-v-b02d00f3]{opacity:.5;cursor:not-allowed}.btn-disabled[data-v-b02d00f3]:hover,.btn-disabled[data-v-b02d00f3]:active,.btn-disabled.active[data-v-b02d00f3]{background-color:transparent!important}@media (max-width: 730px){.mail-translate-banner-container[data-v-b02d00f3]{display:flex;flex-direction:column}}.caption-window-container[data-v-d1944dd0]{position:absolute;width:100%;top:0;pointer-events:none;z-index:10;font-size:16px;color:#ffffffe6;font-weight:400;line-height:150%;transition:bottom .1s ease-in-out}[dir=ltr] .caption-window-container[data-v-d1944dd0]{left:0}[dir=rtl] .caption-window-container[data-v-d1944dd0]{right:0}.caption-window-content[data-v-d1944dd0]{position:absolute;left:40px;right:40px;bottom:5px;display:flex;flex-direction:column;align-items:center}.caption-window-text[data-v-d1944dd0]{background-color:#000000bf;padding:2px 8px;white-space:pre-wrap;display:none}.subtitle-guide-dialog-container[data-v-e6e519b9]{max-width:400px;min-width:320px;width:max-content;white-space:normal;background:#fff;border:1px solid rgb(224,224,224);border-radius:16px;box-shadow:0 12px 32px #00000014;padding:20px 24px 24px;box-sizing:border-box;display:flex;flex-direction:column;text-shadow:none;font-size:14px}.subtitle-guide-dialog-container .dialog-title[data-v-e6e519b9]{color:#000000e6;font-weight:600;line-height:20px;margin-bottom:8px}.subtitle-guide-dialog-container .dialog-description[data-v-e6e519b9]{color:#0009;margin-bottom:20px}.subtitle-guide-dialog-container .dialog-actions[data-v-e6e519b9]{display:flex;gap:8px;justify-content:end}.subtitle-guide-dialog-container .got-it-button[data-v-e6e519b9]{height:40px;padding-left:16px;padding-right:16px;font-weight:600}.subtitle-guide-dialog-container .explore-button[data-v-e6e519b9]{height:40px;font-weight:600}.subtitle-icon[data-v-64fd24a9]{display:inline-flex;align-items:center;justify-content:center}.menu-cell[data-v-de94c478]{display:flex;align-items:center;justify-content:space-between;min-height:48px;padding:0 24px}.menu-cell[data-v-de94c478]:hover{background-color:#ffffff1a}.menu-cell.disabled[data-v-de94c478]:hover{background-color:transparent}.menu-cell .menu-cell-left[data-v-de94c478]{display:flex;align-items:center;gap:8px;flex:1}.menu-cell .menu-cell-right[data-v-de94c478]{display:flex;align-items:center;gap:4px}.menu-container[data-v-20d5d8e7]{display:flex;flex-direction:column;background-color:#000c;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:8px 0;box-shadow:0 2px 4px #0000004d}.menu-divider[data-v-f1c6b8bc]{height:1px;background-color:#fff3;margin:2px 24px}.select-list-item[data-v-cab79358]{display:flex;gap:8px;align-items:center;height:48px;padding:0 24px}.select-list-item[data-v-cab79358]:hover{background-color:#ffffff1a}.menu-header[data-v-4535d3fb]{display:flex;align-items:center;gap:8px;height:48px;padding:0 24px;overflow:hidden}.menu-header .menu-header-title[data-v-4535d3fb]{font-weight:700}.service-list-container[data-v-b42f5d5b]{flex:1;overflow:auto}.group-title[data-v-b42f5d5b]{padding:0 24px;display:flex;gap:8px;margin-top:16px;margin-bottom:8px;align-items:center}.group-title .group-title-text[data-v-b42f5d5b]{font-size:12px;color:#fff9;font-weight:600}.service-item[data-v-b42f5d5b]{display:flex;align-items:center;gap:8px;flex:1}.service-desc[data-v-b42f5d5b]{font-size:12px;color:#fff9}.try-ai-model-tip-wrapper[data-v-eda2ac46]{min-width:260px;max-width:300px;width:max-content;white-space:normal;position:relative;border-radius:8px;box-shadow:0 12px 32px #0d0d0d14;text-shadow:none}.try-ai-model-tip-wrapper .try-ai-model-tip-bg[data-v-eda2ac46]{position:absolute;z-index:0;top:0;bottom:0;border-radius:inherit}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip-bg[data-v-eda2ac46]{left:0;right:0;background:linear-gradient(90deg,#47c8ff,#2962ff)}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip-bg[data-v-eda2ac46]{right:0;left:0;background:linear-gradient(-90deg,#47c8ff,#2962ff)}.try-ai-model-tip-wrapper .try-ai-model-tip[data-v-eda2ac46]{position:relative;font-size:12px;line-height:1.5;border-radius:inherit;border:1px solid transparent;background-color:#fff;background-clip:padding-box}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip[data-v-eda2ac46]{padding:12px 34px 12px 16px}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip[data-v-eda2ac46]{padding:12px 16px 12px 34px}.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .tip-text[data-v-eda2ac46]{color:#333}.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]{-webkit-text-fill-color:transparent;color:transparent;font-weight:600;font-size:12px;cursor:pointer;position:relative;display:inline-block}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]{background:linear-gradient(90deg,#2962ff,#47c8ff)}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]{background:linear-gradient(-90deg,#2962ff,#47c8ff)}[dir] .try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]{-webkit-background-clip:text;background-clip:text}.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]:after{content:"";position:absolute;bottom:0;width:100%;height:1px}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]:after{left:0;background:linear-gradient(90deg,#2962ff,#47c8ff)}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]:after{right:0;background:linear-gradient(-90deg,#2962ff,#47c8ff)}.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]:hover{opacity:.8}.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn[data-v-eda2ac46]:active,.try-ai-model-tip-wrapper .try-ai-model-tip .tip-content .try-text-btn.active[data-v-eda2ac46]{opacity:1}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow[data-v-eda2ac46]{position:absolute;width:0;height:0}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow[data-v-eda2ac46]:after{content:"";position:absolute;width:0;height:0}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]{bottom:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-top:5px solid #4a9eff}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]{left:50%;transform:translate(-50%)}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]{right:50%;transform:translate(50%)}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]:after{top:-6px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:4px solid white}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]:after{left:-5px}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-bottom[data-v-eda2ac46]:after{right:-5px}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]{top:-5px;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:5px solid #4a9eff}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]{left:50%;transform:translate(-50%)}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]{right:50%;transform:translate(50%)}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]:after{bottom:-6px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:4px solid white}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]:after{left:-5px}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-top[data-v-eda2ac46]:after{right:-5px}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]{right:-5px;border-left:5px solid #4a9eff}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]{left:-5px;border-right:5px solid #4a9eff}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]:after{top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]:after{left:-6px;border-left:4px solid white}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-right[data-v-eda2ac46]:after{right:-6px;border-right:4px solid white}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]{top:50%;transform:translateY(-50%);border-top:6px solid transparent;border-bottom:6px solid transparent}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]{left:-5px;border-right:5px solid #4a9eff}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]{right:-5px;border-left:5px solid #4a9eff}.try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]:after{top:-5px;border-top:5px solid transparent;border-bottom:5px solid transparent}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]:after{right:-6px;border-right:4px solid white}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .arrow.arrow-left[data-v-eda2ac46]:after{left:-6px;border-left:4px solid white}.try-ai-model-tip-wrapper .try-ai-model-tip .icon-close[data-v-eda2ac46]{position:absolute;top:6px;cursor:pointer}[dir=ltr] .try-ai-model-tip-wrapper .try-ai-model-tip .icon-close[data-v-eda2ac46]{right:6px}[dir=rtl] .try-ai-model-tip-wrapper .try-ai-model-tip .icon-close[data-v-eda2ac46]{left:6px}.quick-button-container[data-v-f499dd1d]{position:relative;margin:0 16px;padding:0;height:100%;cursor:pointer;z-index:2147483647;display:flex;align-items:center;justify-content:center;font-size:16px;white-space:nowrap;font-weight:400;line-height:20px}.quick-button-container .logo-container[data-v-f499dd1d]{position:relative;width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer}.quick-button-container .logo-container .logo-outer-border[data-v-f499dd1d]{position:absolute;width:36px;height:36px;border:1px solid rgba(255,255,255,.6);border-radius:10px;display:flex;align-items:center;justify-content:center;transition:opacity .2s ease}.quick-button-container .logo-container .logo-outer-border .logo-inner-border[data-v-f499dd1d]{width:30px;height:30px;border:1px solid rgb(255,255,255);border-radius:7px;display:flex;align-items:center;justify-content:center;transition:opacity .2s ease}.quick-button-container .logo-container .logo-outer-border .logo-inner-border .logo-image[data-v-f499dd1d]{width:24px;height:24px;border-radius:4px}.quick-button-container .logo-container.hide-borders .logo-outer-border[data-v-f499dd1d],.quick-button-container .logo-container.hide-borders .logo-outer-border .logo-inner-border[data-v-f499dd1d]{border-color:transparent}.quick-button-container .subtitle-popup-container[data-v-f499dd1d]{position:absolute;bottom:calc(100% - 4px)}.quick-button-container .subtitle-popup-container.hide-borders[data-v-f499dd1d]{bottom:calc(100% - 8px)}.quick-button-container .exceed-limit-tip[data-v-f499dd1d]{width:300px;text-shadow:none;white-space:normal}.quick-button-container .no-caption-tip[data-v-f499dd1d],.quick-button-container .error-tip[data-v-f499dd1d],.quick-button-container .download-tip[data-v-f499dd1d]{color:#fff;font-size:12px;line-height:16px;border-radius:8px;font-weight:400;padding:8px 12px;background-color:#000000bf;border:1px solid rgba(255,255,255,.1);box-shadow:0 12px 32px #00000040}.quick-button-container .error-tip[data-v-f499dd1d]{display:flex;align-items:center;gap:4px}.quick-button-container .error-tip .error-tip-close[data-v-f499dd1d] svg path{stroke:currentColor;fill:currentColor}.quick-button-container[data-v-f499dd1d] ::-webkit-scrollbar{width:4px}.quick-button-container[data-v-f499dd1d] ::-webkit-scrollbar-thumb{background-color:#afafaf;border-radius:12px}.root[data-v-218948ed]{height:0px!important;width:0px!important;font-size:14px;line-height:normal;letter-spacing:normal;cursor:auto;color:initial;font-style:normal;font-weight:400;font-variant:normal;font-stretch:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;text-shadow:none;visibility:visible;white-space:normal}</style><div data-v-218948ed="" dir="ltr" id="root" class="root" style="font-family: Roboto, Avenir, &quot;Segoe UI&quot;, Helvetica, Arial, sans-serif, &quot;PingFang SC&quot;, &quot;Microsoft Yahei&quot;;"><div data-v-2589c71a="" class="hover-ball-container" style="top: 315px; right: 1px;"><div data-v-2589c71a="" class="gift-ball-container" style="visibility: hidden;"><div data-v-2589c71a="" class="gift-image" style="background-image: url(&quot;chrome-extension://aopddeflghjljihihabdclejbojaomaf/public/images/gift.png&quot;);"></div></div><div data-v-2589c71a="" class="actionContainer"><div data-v-2589c71a="" class="translateIcon"><div data-v-b348f0a6="" data-v-2589c71a="" class="icon svg-icon" style="width: 20px; height: 20px; background-image: none; rotate: 90deg;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#fff" fill-rule="evenodd" d="M5.634 2.09c.24-.14.545-.06.681.18l.517.901.036.08h2.194a.5.5 0 0 1 0 1h-.589a15.7 15.7 0 0 1-1.21 2.434q-.232.381-.507.771c.907.993 1.966 2.038 2.923 2.772a.5.5 0 1 1-.608.794c-.98-.752-2.035-1.786-2.935-2.762-.592.704-1.298 1.368-2.125 1.875a.5.5 0 1 1-.522-.852c.76-.466 1.416-1.095 1.972-1.775-.686-.788-1.236-1.49-1.505-1.901a.5.5 0 1 1 .838-.546c.217.333.678.927 1.279 1.625q.177-.262.337-.523c.443-.724.77-1.409.983-1.913H3.125a.5.5 0 1 1 0-1h2.594l-.272-.476a.504.504 0 0 1 .187-.684M3.625 12.813v-.5h-1v3.562a1.5 1.5 0 0 0 1.5 1.5h3.563v-1H4.124a.5.5 0 0 1-.5-.5zm12.75-5.125V4.125a.5.5 0 0 0-.5-.5h-3.562v-1h3.562a1.5 1.5 0 0 1 1.5 1.5v3.563zm-3.683.797c.337-.84 1.528-.837 1.86.006l3.1 7.889a.5.5 0 1 1-.93.366l-1.227-3.12h-3.781l-1.25 3.122a.5.5 0 1 1-.928-.371zm.929.371 1.481 3.77h-2.988z" clip-rule="evenodd"></path></svg></div></div><div data-v-2589c71a="" class="otherIcons"><div data-v-2589c71a="" style="position: relative;"><div data-v-4b3aafaf="" data-v-2589c71a="" style="font-size: 0px; width: 26px; height: 26px;"><div data-v-4b3aafaf="" class="icon-button" aria-disabled="false" style="width: 26px; height: 26px;"><div data-v-b348f0a6="" data-v-4b3aafaf="" class="icon svg-icon" style="width: 18px; height: 18px; background-image: none;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#696969" fill-rule="evenodd" d="M16.842 3.92a.538.538 0 1 0-.761-.762L3.158 16.08a.538.538 0 0 0 .761.761zM10 3.5c1.637 0 3.03.35 4.2.885l-.76.761C12.46 4.75 11.32 4.5 10 4.5c-3.14 0-5.266 1.417-6.62 2.844a10.7 10.7 0 0 0-1.472 1.97c-.156.268-.268.49-.341.643l-.02.043.02.043c.073.153.185.375.34.643.313.538.795 1.254 1.473 1.97.388.409.84.817 1.36 1.19l-.716.716c-.52-.387-.975-.803-1.37-1.218a11.7 11.7 0 0 1-1.611-2.155 10 10 0 0 1-.473-.923l-.025-.057-.007-.017-.002-.005v-.002L1 10l-.465-.185.001-.002.002-.005.007-.017a4 4 0 0 1 .119-.264c.083-.175.208-.421.379-.716a11.7 11.7 0 0 1 1.612-2.155C4.147 5.083 6.52 3.5 10 3.5M1 10l-.465.184a.5.5 0 0 1 0-.368zm9-3.3a3.3 3.3 0 0 1 1.517.369l-.759.759a2.3 2.3 0 0 0-2.93 2.93l-.76.76A3.3 3.3 0 0 1 10 6.7m2.932 1.783-.76.759q.126.357.128.758a2.3 2.3 0 0 1-3.058 2.172l-.759.76a3.3 3.3 0 0 0 4.448-4.448M10 15.5c-1.32 0-2.46-.25-3.44-.646l-.76.76c1.17.536 2.563.886 4.2.886 3.48 0 5.853-1.583 7.345-3.156a11.7 11.7 0 0 0 1.612-2.155 10 10 0 0 0 .473-.923l.025-.057.007-.017.002-.005v-.002L19 10l.465.184a.5.5 0 0 0 0-.368L19 10l.465-.185-.001-.002-.002-.005-.007-.017-.025-.057a10 10 0 0 0-.473-.922 11.7 11.7 0 0 0-1.612-2.156c-.393-.415-.848-.83-1.369-1.218l-.715.715c.52.374.97.782 1.358 1.191a10.7 10.7 0 0 1 1.473 1.97c.156.268.268.49.341.643l.02.043-.02.043a9 9 0 0 1-.34.643 10.7 10.7 0 0 1-1.474 1.97C15.266 14.083 13.14 15.5 10 15.5" clip-rule="evenodd"></path></svg></div></div></div><!----></div><div data-v-2589c71a="" style="position: relative;"><div data-v-4b3aafaf="" data-v-2589c71a="" style="font-size: 0px; width: 26px; height: 26px;"><div data-v-4b3aafaf="" class="icon-button" aria-disabled="false" style="width: 26px; height: 26px;"><div data-v-b348f0a6="" data-v-4b3aafaf="" class="icon svg-icon" style="width: 18px; height: 18px; background-image: none;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#333" d="M7.704 10.51A2 2 0 0 1 9.5 12.5v3l-.01.204a2 2 0 0 1-1.786 1.785L7.5 17.5h-3l-.204-.01a2 2 0 0 1-1.785-1.786L2.5 15.5v-3a2 2 0 0 1 2-2h3zm8 0A2 2 0 0 1 17.5 12.5v3l-.01.204a2 2 0 0 1-1.786 1.785l-.204.011h-3l-.204-.01a2 2 0 0 1-1.785-1.786L10.5 15.5v-3a2 2 0 0 1 2-2h3zm-3.204.99a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm-8 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm3.204-8.99A2 2 0 0 1 9.5 4.5v3l-.01.204A2 2 0 0 1 7.703 9.49L7.5 9.5h-3l-.204-.01A2 2 0 0 1 2.51 7.703L2.5 7.5v-3a2 2 0 0 1 2-2h3zm8 0A2 2 0 0 1 17.5 4.5v3l-.01.204a2 2 0 0 1-1.786 1.785L15.5 9.5h-3l-.204-.01a2 2 0 0 1-1.785-1.786L10.5 7.5v-3a2 2 0 0 1 2-2h3zM4.5 3.5a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zm8 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1z"></path></svg></div></div></div><!----></div><div data-v-2589c71a="" style="position: relative;"><div data-v-4b3aafaf="" data-v-2589c71a="" style="font-size: 0px; width: 26px; height: 26px;"><div data-v-4b3aafaf="" class="icon-button" aria-disabled="false" style="width: 26px; height: 26px;"><div data-v-b348f0a6="" data-v-4b3aafaf="" class="icon svg-icon" style="width: 18px; height: 18px; background-image: none;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#696969" fill-rule="evenodd" d="M3 4.5A2.5 2.5 0 0 1 5.5 2h9A2.5 2.5 0 0 1 17 4.5V9a.5.5 0 0 1-1 0V4.5A1.5 1.5 0 0 0 14.5 3h-9A1.5 1.5 0 0 0 4 4.5V15a1.5 1.5 0 0 0 1.5 1.5h2a.5.5 0 0 1 0 1h-2A2.5 2.5 0 0 1 3 15zM16.845 14l-1.922-3.33h-3.846L9.155 14l1.922 3.33h3.846zm-1.056-3.83a1 1 0 0 0-.866-.5h-3.846a1 1 0 0 0-.866.5L8.29 13.5a1 1 0 0 0 0 1l1.922 3.33a1 1 0 0 0 .866.5h3.846a1 1 0 0 0 .866-.5l1.922-3.33a1 1 0 0 0 0-1zM14 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m1 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0" clip-rule="evenodd"></path></svg></div></div></div><!----></div><div data-v-2589c71a="" style="position: relative;"><div data-v-4b3aafaf="" data-v-2589c71a="" style="font-size: 0px; width: 26px; height: 26px;"><div data-v-4b3aafaf="" class="icon-button" aria-disabled="false" style="width: 26px; height: 26px;"><div data-v-b348f0a6="" data-v-4b3aafaf="" class="icon svg-icon" style="width: 18px; height: 18px; background-image: none;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#696969" fill-rule="evenodd" d="M13.429 6.267c0-1.768-1.536-3.2-3.429-3.2-1.826 0-3.318 1.332-3.423 3.012l-.006.188v6.4c0 .547-.44.998-1.01 1.06l-.132.006H4.286c-1.205 0-2.192-.87-2.28-1.974L2 11.6V9.922c0-.75.422-1.44 1.102-1.825l.162-.083 2.165-1.011v-.736c0-2.285 1.924-4.15 4.343-4.262L10 2c2.448 0 4.447 1.796 4.566 4.054l.005.213v.737l2.165 1.01c.72.336 1.193.997 1.257 1.736l.007.172V11.6c0 1.125-.932 2.046-2.115 2.127l-.17.006H14.57v.534c0 2.061-1.79 3.733-4 3.733-.315 0-.571-.239-.571-.533s.256-.534.571-.534c1.515 0 2.755-1.1 2.851-2.491l.007-.175zm1.142 1.93v4.47h1.143c.586 0 1.07-.412 1.135-.943l.008-.124V9.922c0-.36-.193-.69-.508-.887l-.124-.067zM5.43 8.194l-1.654.773c-.344.16-.576.47-.623.821l-.009.133V11.6c0 .547.441.998 1.01 1.06l.133.007H5.43z" clip-rule="evenodd"></path></svg></div></div></div><!----></div></div></div><img data-v-2589c71a="" class="closeIcon" src="chrome-extension://aopddeflghjljihihabdclejbojaomaf/public/images/close.png" style="display: none;"><!----><!----><!----><!----></div><!----><!----><!----><div data-v-0a1651d0="" class="word-translate-bubble black-theme" style="top: 0px; left: 0px; display: none;"><div data-v-b348f0a6="" data-v-0a1651d0="" class="icon svg-icon" style="width: 20px; height: 20px; background-image: none;"><svg data-v-b348f0a6="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20" class="svg"><path fill="#fff" fill-rule="evenodd" d="M5.634 2.09c.24-.14.545-.06.681.18l.517.901.036.08h2.194a.5.5 0 0 1 0 1h-.589a15.7 15.7 0 0 1-1.21 2.434q-.232.381-.507.771c.907.993 1.966 2.038 2.923 2.772a.5.5 0 1 1-.608.794c-.98-.752-2.035-1.786-2.935-2.762-.592.704-1.298 1.368-2.125 1.875a.5.5 0 1 1-.522-.852c.76-.466 1.416-1.095 1.972-1.775-.686-.788-1.236-1.49-1.505-1.901a.5.5 0 1 1 .838-.546c.217.333.678.927 1.279 1.625q.177-.262.337-.523c.443-.724.77-1.409.983-1.913H3.125a.5.5 0 1 1 0-1h2.594l-.272-.476a.504.504 0 0 1 .187-.684M3.625 12.813v-.5h-1v3.562a1.5 1.5 0 0 0 1.5 1.5h3.563v-1H4.124a.5.5 0 0 1-.5-.5zm12.75-5.125V4.125a.5.5 0 0 0-.5-.5h-3.562v-1h3.562a1.5 1.5 0 0 1 1.5 1.5v3.563zm-3.683.797c.337-.84 1.528-.837 1.86.006l3.1 7.889a.5.5 0 1 1-.93.366l-1.227-3.12h-3.781l-1.25 3.122a.5.5 0 1 1-.928-.371zm.929.371 1.481 3.77h-2.988z" clip-rule="evenodd"></path></svg></div><div data-v-0a1651d0="">Translate</div><div data-v-0a1651d0="" class="translate-text-sharp-angle sharp-top"></div></div><!----><!----><!----><!----><!----><!----><div data-v-218948ed=""><!----><!----><!----></div></div></template></wps-translate-entry></html>

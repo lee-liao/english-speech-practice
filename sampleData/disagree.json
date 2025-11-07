@@ -1,0 +1,19 @@
+  {
+    "id": "disagree",
+    "title": "委婉表达不同意见",
+    "description": "礼貌提出不同观点的表达方式",
+    "questions": [
+      {
+        "chinese": "我理解你的意思，不过",
+        "english": "I see where you’re coming from, but..."
+      },
+      {
+        "chinese": "虽然这个观点有道理，但我觉得",
+        "english": "While that’s a valid point, I’d argue that..."
+      },
+      {
+        "chinese": "或许我们可以换个角度看",
+        "english": "Perhaps we can look at it from another angle..."
+      }
+    ]
+  }

@@ -1,0 +1,19 @@
+{
+    "id": "think_time",
+    "title": "获得思考时间",
+    "description": "临时需要梳理思路时的自然表达",
+    "questions": [
+      {
+        "chinese": "给我一秒钟想想",
+        "english": "Let me think for a second."
+      },
+      {
+        "chinese": "我需要点时间梳理一下",
+        "english": "I need a moment to process that."
+      },
+      {
+        "chinese": "我先理清一下思路",
+        "english": "Let me wrap my head around this first."
+      }
+    ]
+  }

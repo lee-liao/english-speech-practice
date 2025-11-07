@@ -1,0 +1,23 @@
+  {
+    "id": "persuade",
+    "title": "说服和解释",
+    "description": "清晰表达观点、解释说明的转场句",
+    "questions": [
+      {
+        "chinese": "换句话说",
+        "english": "To put it another way..."
+      },
+      {
+        "chinese": "在我看来",
+        "english": "The way I see it..."
+      },
+      {
+        "chinese": "为了说明白，我的意思是",
+        "english": "To clarify, what I mean is..."
+      },
+      {
+        "chinese": "简单来说，这意味着",
+        "english": "Simply put, that translates to..."
+      }
+    ]
+  }

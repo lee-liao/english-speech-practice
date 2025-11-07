@@ -1,0 +1,23 @@
+  {
+    "id": "attention",
+    "title": "获得别人注意",
+    "description": "快速吸引他人注意力的实用表达",
+    "questions": [
+      {
+        "chinese": "事情是这样的",
+        "english": "Here is the thing..."
+      },
+      {
+        "chinese": "有趣的是",
+        "english": "What's interesting is.."
+      },
+      {
+        "chinese": "麻烦大家注意一下",
+        "english": "Can I have your attention, please?"
+      },
+      {
+        "chinese": "有件小事要说明一下",
+        "english": "One quick thing to mention."
+      }
+    ]
+  }

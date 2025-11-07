@@ -1,0 +1,19 @@
+ {
+    "id": "summarize",
+    "title": "总结归纳",
+    "description": "梳理核心信息、简洁总结的表达",
+    "questions": [
+      {
+        "chinese": "简要总结一下",
+        "english": "To sum up briefly..."
+      },
+      {
+        "chinese": "简而言之",
+        "english": "In a nutshell..."
+      },
+      {
+        "chinese": "这里的关键收获是",
+        "english": "The takeaway here is..."
+      }
+    ]
+  }

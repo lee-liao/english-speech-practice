@@ -1,0 +1,23 @@
+  {
+    "id": "handle_question",
+    "title": "获得时间应对提问",
+    "description": "接到提问后，争取思考时间的表达",
+    "questions": [
+      {
+        "chinese": "这是个好问题",
+        "english": "It is a good question..."
+      },
+      {
+        "chinese": "这个问题问得好，我来详细说",
+        "english": "That’s an excellent question—let me elaborate."
+      },
+      {
+        "chinese": "感谢提问，我们来拆解一下",
+        "english": "I appreciate the question; let’s break it down."
+      },
+      {
+        "chinese": "我来专门解答这个问题",
+        "english": "Let me address that point specifically."
+      }
+    ]
+  }

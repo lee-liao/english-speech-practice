@@ -1,0 +1,23 @@
+  {
+    "id": "praise",
+    "title": "赞许鼓励",
+    "description": "肯定他人观点、给予鼓励的表达",
+    "questions": [
+      {
+        "chinese": "你做得很好",
+        "english": "You did a great job..."
+      },
+      {
+        "chinese": "这个观点很有道理",
+        "english": "That’s a solid point."
+      },
+      {
+        "chinese": "你抓住了核心问题",
+        "english": "You’ve nailed the main issue."
+      },
+      {
+        "chinese": "见解很棒，谢谢分享",
+        "english": "Great insight—thanks for sharing."
+      }
+    ]
+  }
