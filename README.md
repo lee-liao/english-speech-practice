@@ -2,17 +2,17 @@
 
 ## 📝 简介 / Introduction
 
-这是一个交互式的英语口语练习应用，帮助用户练习各种会议场景下的英语表达。应用包含多种预设场景，并支持用户自定义场景。
+这是一个交互式的英语口语练习应用，帮助用户练习各种场景下的英语表达。应用包含预设的会议场景，并支持用户自定义场景。
 
 This is an interactive English speech practice application that helps users practice English expressions in various meeting scenarios. The application includes multiple preset scenarios and supports user-defined scenarios.
 
-[English Speech Practice](EnglishSpeechPractice.html)
+<center><h2>▶️ <a href="EnglishSpeechPractice.html">English Speech Practice</a></h2></center>
 
 ## 🙏 尊重声明 / Notice of Respect
 
 本项目采用 Apache 2.0 许可证。虽然该许可证允许自由分发和修改，但我诚挚地请求所有分发者和使用者尊重开源协作的精神，保留原作者的署名并明确标注原始作品。
 
-如果您在此项目基础上进行开发或公开分享，请保留许可证头部信息，并附上本仓库的链接。您的尊重将有助于维护开源贡献，并激励持续的开发工作。
+如果您在此项目基础上进行开发或公开分享，请保留许可证头部信息，并附上本仓库的链接。您的尊重将有助于维护开源贡献并激励持续的开发工作。
 
 感谢您支持开放知识与公平使用。
 
@@ -95,26 +95,25 @@ Here is an example of a custom scenario JSON file:
 
 ## 💻 技术特性 / Technical Features
 
-- Web Speech API 语音识别
-- 本地存储（localStorage）支持
-- 响应式界面设计
-- 智能文本相似度匹配
-- 现代浏览器兼容
-
-- Web Speech API voice recognition
-- Local storage (localStorage) support
-- Responsive interface design
-- Intelligent text similarity matching
-- Modern browser compatibility
-
+- Web Speech API 语音识别 / Web Speech API voice recognition
+- 本地存储（localStorage）支持 / Local storage (localStorage) support
+- 响应式界面设计 / Responsive interface design
+- 智能文本相似度匹配 / Intelligent text similarity matching
+- 现代浏览器支持 (Chrome, Edge, etc.) / Modern browsers (Chrome, Edge, etc.)
+- 麦克风权限 / Microphone permissions
 ## 🚀 部署方法 / Deployment Methods
 
 ### 本地使用 / Local Usage
 - 直接双击 HTML 文件在浏览器中打开即可
 - 或将整个项目文件夹放置在任何 HTTP 服务器中
 
+- Directly double-click the HTML file to open it in a browser.
+- Or place the entire project folder in any HTTP server.
+
 ### 简单HTTP服务器 / Simple HTTP Servers
 以下是一些可以用来部署的简单HTTP服务器示例：
+
+Here are some examples of simple HTTP servers that can be used for deployment:
 
 #### Python
 ```bash
@@ -143,7 +142,3 @@ php -S localhost:8000
 ```bash
 ruby -run -e httpd . -p 8000
 ```
-
-- Modern browsers (Chrome, Edge, etc.)
-- Web Speech API support
-- Microphone permissions
