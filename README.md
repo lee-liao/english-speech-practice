@@ -8,6 +8,20 @@ This is an interactive English speech practice application that helps users prac
 
 [English Speech Practice](EnglishSpeechPractice.html)
 
+## 尊重声明 / Notice of Respect
+
+本项目采用 Apache 2.0 许可证。虽然该许可证允许自由分发和修改，但我诚挚地请求所有分发者和使用者尊重开源协作的精神，保留原作者的署名并明确标注原始作品。
+
+如果您在此项目基础上进行开发或公开分享，请保留许可证头部信息，并附上本仓库的链接。您的尊重将有助于维护开源贡献，并激励持续的开发工作。
+
+感谢您支持开放知识与公平使用。
+
+This project is licensed under the Apache 2.0 License. While the license permits redistribution and modification, I kindly ask that all distributors and users honor the spirit of open collaboration by retaining proper attribution and acknowledging the original work.
+
+If you build upon this project or share it publicly, please preserve the license headers and include a reference to this repository. Your respect helps sustain open-source contributions and encourages continued development.
+
+Thank you for supporting open knowledge and fair use.
+
 ## 功能特性 / Features
 
 - 预设会议场景练习（开场、讨论、表达意见、提问、结束）
