@@ -82,19 +82,6 @@ At the bottom of the page, you can upload custom scenario JSON files:
 }
 ```
 
-## 📄 文件格式 / File Format
-
-自定义场景文件格式为 JSON：
-
-Custom scenario file format is JSON:
-
-- `id` - 场景唯一标识符 / Unique identifier for the scenario
-- `title` - 场景标题 / Scenario title
-- `description` - 场景描述 / Scenario description
-- `questions` - 问题数组 / Array of questions
-  - `chinese` - 中文提示 / Chinese prompt
-  - `english` - 英文答案（字符串或字符串数组） / English answer (string or string array)
-
 ## 💻 技术特性 / Technical Features
 
 - Web Speech API 语音识别
@@ -149,3 +136,16 @@ ruby -run -e httpd . -p 8000
 - Modern browsers (Chrome, Edge, etc.)
 - Web Speech API support
 - Microphone permissions
+
+## 📄 文件格式 / File Format
+
+自定义场景文件格式为 JSON：
+
+Custom scenario file format is JSON:
+
+- `id` - 场景唯一标识符 / Unique identifier for the scenario
+- `title` - 场景标题 / Scenario title
+- `description` - 场景描述 / Scenario description
+- `questions` - 问题数组 / Array of questions
+  - `chinese` - 中文提示 / Chinese prompt
+  - `english` - 英文答案（字符串或字符串数组） / English answer (string or string array)
