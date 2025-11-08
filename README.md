@@ -16,9 +16,9 @@ This is an interactive English speech practice application that helps users prac
 
 感谢您支持开放知识与公平使用。
 
-This project is licensed under the Apache 2.0 License. While the license permits redistribution and modification, I kindly ask that all distributors and users honor the spirit of open collaboration by retaining proper attribution and acknowledging the original work.
+This project is licensed under the Apache 2.0 License. While the license permits redistribution and modification, I kindly ask that all distributors and users honor the spirit of open collaboration by retaining proper attribution and clearly acknowledging the original work.
 
-You are welcome to adapt this application to present user interface and use prompts in other languages. If you build upon this project or share it publicly, please preserve the license headers and include a reference to this repository. Your respect helps sustain open-source contributions and encourages continued development. 
+You are welcome to adapt this application to support user interfaces and prompts in other languages. If you build upon this project or share it publicly, please preserve the license headers and include a reference to this repository. Your respect helps sustain open-source contributions and encourages continued development.
 
 Thank you for supporting open knowledge and fair use.
 
