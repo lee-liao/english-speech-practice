@@ -6,6 +6,8 @@
 
 This is an interactive English speech practice application that helps users practice English expressions in various meeting scenarios. The application includes multiple preset scenarios and supports user-defined scenarios.
 
+[English Speech Practice](EnglishSpeechPractice.html)
+
 ## 功能特性 / Features
 
 - 预设会议场景练习（开场、讨论、表达意见、提问、结束）
