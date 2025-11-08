@@ -1,6 +1,6 @@
-# 🎤 英语用语练习 / English Speech Practice
+# 英语用语练习 / English Speech Practice
 
-## 📝 简介 / Introduction
+## 简介 / Introduction
 
 这是一个交互式的英语口语练习应用，帮助用户练习各种会议场景下的英语表达。应用包含多种预设场景，并支持用户自定义场景。
 
@@ -8,7 +8,7 @@ This is an interactive English speech practice application that helps users prac
 
 [English Speech Practice](EnglishSpeechPractice.html)
 
-## 🙏 尊重声明 / Notice of Respect
+## 尊重声明 / Notice of Respect
 
 本项目采用 Apache 2.0 许可证。虽然该许可证允许自由分发和修改，但我诚挚地请求所有分发者和使用者尊重开源协作的精神，保留原作者的署名并明确标注原始作品。
 
@@ -22,7 +22,7 @@ If you build upon this project or share it publicly, please preserve the license
 
 Thank you for supporting open knowledge and fair use.
 
-## ✨ 功能特性 / Features
+## 功能特性 / Features
 
 - 预设会议场景练习（开场、讨论、表达意见、提问、结束）
 - 语音识别功能，支持实时语音输入
@@ -38,7 +38,7 @@ Thank you for supporting open knowledge and fair use.
 - Personalized learning progress tracking
 - Custom scenario upload support (JSON format)
 
-## 🚀 使用方法 / Usage
+## 使用方法 / Usage
 
 ### 场景选择 / Scene Selection
 
@@ -82,7 +82,7 @@ At the bottom of the page, you can upload custom scenario JSON files:
 }
 ```
 
-## 💻 技术特性 / Technical Features
+## 技术特性 / Technical Features
 
 - Web Speech API 语音识别
 - 本地存储（localStorage）支持
@@ -96,7 +96,7 @@ At the bottom of the page, you can upload custom scenario JSON files:
 - Intelligent text similarity matching
 - Modern browser compatibility
 
-## 🚀 部署方法 / Deployment Methods
+## 部署方法 / Deployment Methods
 
 ### 本地使用 / Local Usage
 - 直接双击 HTML 文件在浏览器中打开即可
@@ -137,7 +137,7 @@ ruby -run -e httpd . -p 8000
 - Web Speech API support
 - Microphone permissions
 
-## 📄 文件格式 / File Format
+## 文件格式 / File Format
 
 自定义场景文件格式为 JSON：
 
