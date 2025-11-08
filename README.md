@@ -4,7 +4,7 @@
 
 这是一个交互式的英语口语练习应用，帮助用户练习各种场景下的英语表达。应用包含预设的会议场景，并支持用户自定义场景。
 
-This is an interactive English speech practice application that helps users practice English expressions in various meeting scenarios. The application includes multiple preset scenarios and supports user-defined scenarios.
+This is an interactive English speech practice application that helps users practice English expressions in various scenarios. The application includes preset meeting scenarios and supports user-defined scenarios.
 
 <center><h2>▶️ <a href="EnglishSpeechPractice.html">English Speech Practice</a></h2></center>
 
