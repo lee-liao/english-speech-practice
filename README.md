@@ -101,6 +101,7 @@ Here is an example of a custom scenario JSON file:
 - 智能文本相似度匹配 / Intelligent text similarity matching
 - 现代浏览器支持 (Chrome, Edge, etc.) / Modern browsers (Chrome, Edge, etc.)
 - 麦克风权限 / Microphone permissions
+
 ## 🚀 部署方法 / Deployment Methods
 
 ### 本地使用 / Local Usage
