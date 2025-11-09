@@ -1781,11 +1781,9 @@ voiceButton.innerHTML = '<span><span class="">🎤</span></span>';
         }
 
         function loadCustomScenes() {
-            // 将自定义场景按钮添加到主场景选择区域
             const sceneSelectionGrid = document.querySelector('#scene-selection .grid');
-            // 先清除现有的自定义场景按钮
             document.querySelectorAll('.custom-scene-btn').forEach(btn => btn.remove());
-            
+
             for (let i = 0; i < localStorage.length; i++) {
                 const key = localStorage.key(i);
                 if (key.startsWith('custom_scenario_')) {
@@ -1793,11 +1791,42 @@ voiceButton.innerHTML = '<span><span class="">🎤</span></span>';
                     const sceneButton = document.createElement('button');
                     sceneButton.className = 'scene-button hover-lift custom-scene-btn';
                     sceneButton.onclick = () => startCustomPractice(data.id);
-                    sceneButton.innerHTML = `
+
+                    const content = document.createElement('div');
+                    content.style.position = 'relative';
+                    content.innerHTML = `
                         <span class="text-3xl mb-2">📝</span>
                         <h3 class="text-xl font-semibold mb-2">${data.title}</h3>
                         <p class="text-sm opacity-90">${data.description}</p>
                     `;
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.className = 'delete-btn';
+                    deleteButton.style.position = 'absolute';
+                    deleteButton.style.bottom = '-10px';
+                    deleteButton.style.left = '-10px';
+                    deleteButton.style.background = 'rgba(108, 117, 125, 0.7)';
+                    deleteButton.style.color = 'white';
+                    deleteButton.style.borderRadius = '50%';
+                    deleteButton.style.width = '28px';
+                    deleteButton.style.height = '28px';
+                    deleteButton.style.border = 'none';
+                    deleteButton.style.cursor = 'pointer';
+                    deleteButton.style.fontSize = '14px';
+                    deleteButton.style.lineHeight = '28px';
+                    deleteButton.style.textAlign = 'center';
+                    deleteButton.style.display = 'flex';
+                    deleteButton.style.alignItems = 'center';
+                    deleteButton.style.justifyContent = 'center';
+                    deleteButton.style.padding = '0';
+                    deleteButton.innerHTML = '♻';
+                    deleteButton.addEventListener('click', (event) => {
+                        event.stopPropagation();
+                        deleteCustomScene(data.id, event);
+                    });
+
+                    content.appendChild(deleteButton);
+                    sceneButton.appendChild(content);
                     sceneSelectionGrid.appendChild(sceneButton);
                 }
             }
