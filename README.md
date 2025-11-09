@@ -65,7 +65,7 @@ Click on the scene buttons on the main interface to select the type you want to 
 - Click "Check Answer" to verify your response
 - Click "Next Question" to continue practicing
 
-### 📄 自定义场景与文件格式 / Custom Scenarios and File Format
+### - 📄 自定义场景与文件格式 / Custom Scenarios and File Format
 
 在页面底部可以从本机上传自定义场景JSON文件。自定义场景文件格式为 JSON：
 
