@@ -47,13 +47,13 @@ Thank you for supporting open knowledge and fair use.
 
 ## 🚀 使用方法 / Usage
 
-### 场景选择 / Scene Selection
+### - 🎛️ 场景选择 / Scene Selection
 
 点击主界面的场景按钮选择要练习的类型。
 
 Click on the scene buttons on the main interface to select the type you want to practice.
 
-### 练习过程 / Practice Process
+### - 💪 练习过程 / Practice Process
 
 - 应用会显示中文提示，您需要用英语表达
 - 可以使用语音输入或手动输入答案
@@ -100,9 +100,7 @@ Here is an example of a custom scenario JSON file:
 }
 ```
 
-样例JSON文件
-
-sample JSON files
+### - 📂 样例JSON文件 / sample JSON files
 
 [衔接过渡 transition](sampleData/transition.json)
 
