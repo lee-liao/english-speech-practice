@@ -1,3 +1,10 @@
+<!--
+Licensed under the Apache License, Version 2.0
+See LICENSE file or http://www.apache.org/licenses/LICENSE-2.0
+
+Copyright (c) 2025 Lee Liao (Github id lee-liao)
+Please retain attribution when redistributing or modifying.
+-->
 # 🎤 英语用语练习 / English Speech Practice
 
 ## 📝 简介 / Introduction
@@ -12,13 +19,13 @@ This is an interactive English speech practice application that helps users prac
 
 本项目采用 Apache 2.0 许可证。虽然该许可证允许自由分发和修改，但我诚挚地请求所有分发者和使用者尊重开源协作的精神，保留原作者的署名并明确标注原始作品。
 
-欢迎将此应用制作成使用其它语言作界面和提示。如果您在此项目基础上进行开发或公开分享，请保留许可证头部信息，并附上本仓库的链接。您的尊重将有助于维护开源贡献并激励持续的开发工作。
+欢迎合作添加其它语言作界面和提示。如果您在此项目基础上进行开发或公开分享，请保留许可证头部信息，并附上本仓库的链接。您的尊重将有助于维护开源贡献并激励持续的开发工作。
 
 感谢您支持开放知识与公平使用。
 
 This project is licensed under the Apache 2.0 License. While the license permits redistribution and modification, I kindly ask that all distributors and users honor the spirit of open collaboration by retaining proper attribution and clearly acknowledging the original work.
 
-You are welcome to adapt this application to support user interfaces and prompts in other languages. If you build upon this project or share it publicly, please preserve the license headers and include a reference to this repository. Your respect helps sustain open-source contributions and encourages continued development.
+You are welcome to contribute to support other languages on UI and hints. If you build upon this project or share it publicly, please preserve the license headers and include a reference to this repository. Your respect helps sustain open-source contributions and encourages continued development.
 
 Thank you for supporting open knowledge and fair use.
 
@@ -60,9 +67,9 @@ Click on the scene buttons on the main interface to select the type you want to 
 
 ### 📄 自定义场景与文件格式 / Custom Scenarios and File Format
 
-在页面底部可以上传自定义场景JSON文件。自定义场景文件格式为 JSON：
+在页面底部可以从本机上传自定义场景JSON文件。自定义场景文件格式为 JSON：
 
-At the bottom of the page, you can upload custom scenario JSON files. The custom scenario file format is JSON:
+At the bottom of the page, you can upload custom scenario JSON files from your local drive. The custom scenario file format is JSON:
 
 - `id` - 场景唯一标识符 / Unique identifier for the scenario
 - `title` - 场景标题 / Scenario title
@@ -92,6 +99,29 @@ Here is an example of a custom scenario JSON file:
   ]
 }
 ```
+
+样例JSON文件
+
+sample JSON files
+
+[衔接过渡 transition](sampleData/transition.json)
+
+[获得别人注意 attention](sampleData/attention.json)
+
+[委婉表达不同意见 disagree](sampleData/disagree.json)
+
+[获得时间应对提问 handle_question](sampleData/handle_question.json)
+
+[说服和解释 persuade](sampleData/persuade.json)
+
+[赞许鼓励 praise](sampleData/praise.json)
+
+[获得思考时间 think_time](sampleData/think_time.json)
+
+[总结归纳 summarize](sampleData/summarize.json)
+
+---
+### 🧑‍💻 以下内容面向技术读者 / The following sections are intended for technical readers
 
 ## 💻 技术特性 / Technical Features
 
@@ -143,3 +173,28 @@ php -S localhost:8000
 ```bash
 ruby -run -e httpd . -p 8000
 ```
+
+## 📄 许可证 / License
+
+本项目采用 [Apache 2.0 许可证](LICENSE)。您可以自由使用、修改和分发本项目，但请保留原始许可证文件和相关版权声明。
+
+This project is licensed under the [Apache 2.0 License](LICENSE). You are free to use, modify, and distribute this project, but please retain the original license file and associated copyright notices.
+
+## 📬 联系方式 / Contact
+
+如需有限支持或希望探讨合作机会，欢迎通过以下方式联系我. 虽然我无法提供全面的技术支持，但我始终欢迎尊重的交流、反馈与合作建议。
+
+For limited support or to explore potential collaboration opportunities, feel free to reach out. While I may not be able to offer extensive technical assistance, I welcome respectful dialogue, feedback, and ideas that align with the spirit of open-source learning and community building.
+
+- 📧 Email: `liao_lee@hotmail.com`  
+- 🐙 GitHub: [@lee-liao](https://github.com/lee-liao)
+
+## 🤝 贡献指南 / Contributing
+
+欢迎贡献者参与本项目！如果您有改进建议或功能补充，请通过 Fork 本仓库并提交 Pull Request 的方式参与。
+
+请确保您的提交遵循项目的结构和风格，并保留原始许可证信息。
+
+Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
+
+Make sure your contributions follow the project’s structure and style, and retain the original license information.
