@@ -9,9 +9,9 @@ Please retain attribution when redistributing or modifying.
 
 ## 📝 简介 / Introduction
 
-这是一个交互式的英语口语练习应用，帮助用户练习各种场景下的英语表达。应用包含预设的会议场景，并支持用户自定义场景。
+这是一个完全免费的交互式的英语口语练习应用，帮助用户练习各种场景下的英语表达。应用包含预设的会议场景，并支持用户自定义场景。应用使用的技术不需要订阅大模型服务。
 
-This is an interactive English speech practice application that helps users practice English expressions in various scenarios. The application includes preset meeting scenarios and supports user-defined scenarios.
+This is a free interactive English speech practice application that helps users practice English expressions in various scenarios. The application includes preset meeting scenarios and supports user-defined scenarios. The technology used by the application does not require a subscription to a LLM service.
 
 <center><h2>▶️ <a href="EnglishSpeechPractice.html">English Speech Practice</a></h2></center>
 
