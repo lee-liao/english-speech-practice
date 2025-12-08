@@ -1,0 +1,45 @@
+name: Deploy Jekyll site to remote server
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Build Jekyll site using Docker
+      run: |
+        docker run \
+          -v ${{ github.workspace }}:/srv/jekyll \
+          -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+          jekyll/builder:latest \
+          /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+
+    - name: Install SSH client and rsync
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openssh-client rsync
+
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+
+        # Create SSH config for convenience
+        printf "Host remote\n" >> ~/.ssh/config
+        printf "  HostName ${{ secrets.SSH_HOST }}\n" >> ~/.ssh/config
+        printf "  User ${{ secrets.SSH_USER }}\n" >> ~/.ssh/config
+        printf "  IdentityFile ~/.ssh/id_ed25519\n" >> ~/.ssh/config
+        printf "  StrictHostKeyChecking no\n" >> ~/.ssh/config
+
+    - name: Deploy site via rsync
+      run: |
+        rsync -avz --delete \
+          ${{ github.workspace }}/_site/ \
+          remote:${{ secrets.SSH_TARGET_DIR }}/
