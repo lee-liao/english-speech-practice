@@ -76,28 +76,21 @@ jobs:
 
     # Deploy Docker container to remote server via SSH
     - name: Deploy to Server via SSH
-      if: env.SSH_HOST != ''
       continue-on-error: true
       uses: appleboy/ssh-action@v1.0.3
-      env:
-        SSH_HOST: ${{ secrets.SSH_HOST }}
-        SSH_USER: ${{ secrets.SSH_USER }}
-        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          # Check if essential variables are set
-          if [ -z "$SSH_HOST" ] || [ -z "$SSH_USER" ]; then
-            echo "SSH deployment secrets not configured. Skipping Docker deployment."
-            exit 0
-          fi
+          # Define environment variables from GitHub Repository Variables
+          CONTAINER_NAME=${{ vars.CONTAINER_NAME }}
+          HOST_PORT=${{ vars.HOST_PORT }}
           
-          # Define environment variables
-          CONTAINER_NAME=Lee-english-speech-practice
-          HOST_PORT=4530
+          # Set default values if variables are not defined
+          CONTAINER_NAME=${CONTAINER_NAME:-Lee-english-speech-practice}
+          HOST_PORT=${HOST_PORT:-4530}
           
           # Login to GitHub Container Registry
           echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
