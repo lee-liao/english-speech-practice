@@ -69,7 +69,7 @@ Click on the scene buttons on the main interface to select the type you want to 
 
 在页面底部可以从本机上传自定义场景JSON文件。自定义场景文件格式为 JSON：
 
-At the bottom of the page, you can upload custom scenario JSON files from your local drive. The custom scenario file format is JSON:
+At the bottom of the page, you can upload custom scenario JSON files from your local drive. The custom scenario file format is JSON：
 
 - `id` - 场景唯一标识符 / Unique identifier for the scenario
 - `title` - 场景标题 / Scenario title
@@ -80,7 +80,7 @@ At the bottom of the page, you can upload custom scenario JSON files from your l
 
 这是一个自定义场景的JSON文件示例：
 
-Here is an example of a custom scenario JSON file:
+Here is an example of a custom scenario JSON file：
 
 ```json
 {
@@ -142,7 +142,7 @@ Here is an example of a custom scenario JSON file:
 ### 简单HTTP服务器 / Simple HTTP Servers
 以下是一些可以用来部署的简单HTTP服务器示例：
 
-Here are some examples of simple HTTP servers that can be used for deployment:
+Here are some examples of simple HTTP servers that can be used for deployment：
 
 #### Python
 ```bash
@@ -172,6 +172,52 @@ php -S localhost:8000
 ruby -run -e httpd . -p 8000
 ```
 
+### Docker 部署 / Docker Deployment
+
+本项目支持使用 Docker 进行容器化部署。
+
+This project supports containerized deployment using Docker.
+
+#### 使用 docker-compose (推荐) / Using docker-compose (Recommended)
+
+项目包含了 [docker-compose.yml](docker-compose.yml) 文件，可以通过以下命令启动应用：
+
+The project includes a [docker-compose.yml](docker-compose.yml) file, and you can start the application with the following command：
+
+```bash
+docker-compose up -d
+```
+
+默认情况下，应用将在端口 4530 上运行。您可以通过修改 [.env](.env) 文件来更改端口和其他配置选项。
+
+By default, the application will run on port 4530. You can change the port and other configuration options by modifying the [.env](.env) 文件。
+
+#### 环境变量 / Environment Variables
+
+项目使用环境变量来配置容器名称和端口。您可以创建一个 [.env](.env) 文件来设置这些值：
+
+The project uses environment variables to configure the container name and port. You can create a [.env](.env) 文件 to set these values：
+
+```env
+CONTAINER_NAME=english-speech-practice
+HOST_PORT=4530
+```
+
+或者参考提供的 [.env.example](.env.example) 文件创建您的配置。注意 [.env](.env) 文件应该被添加到 [.gitignore](.gitignore) 中以避免敏感信息泄露。
+
+Or refer to the provided [.env.example](.env.example) file to create your configuration. Note that the [.env](.env) file should be added to [.gitignore](.gitignore) to prevent sensitive information leakage.
+
+#### 直接使用 Docker / Using Docker directly
+
+您也可以直接使用 Docker 构建和运行容器：
+
+You can also directly use Docker to build and run the container：
+
+```bash
+docker build -t english-speech-practice .
+docker run -d --name english-speech-practice -p 4530:80 english-speech-practice
+```
+
 ## 📄 许可证 / License
 
 本项目采用 [Apache 2.0 许可证](LICENSE)。您可以自由使用、修改和分发本项目，但请保留原始许可证文件和相关版权声明。
@@ -195,4 +241,4 @@ For limited support or to explore potential collaboration opportunities, feel fr
 
 Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
 
-Make sure your contributions follow the project’s structure and style, and retain the original license information.
+Make sure your contributions follow the project's structure and style, and retain the original license information.

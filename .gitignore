@@ -1,1 +1,11 @@
+# Environment variables file
+.env
+
+# Other common files to ignore
+*.log
+node_modules/
+dist/
+build/
+.env.local
+.env.*.local
 .wucai/
