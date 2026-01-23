@@ -141,23 +141,7 @@
             outline: none;
         }
         
-        .feedback-correct {
-            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            animation: slideUp 0.5s ease-out;
-        }
-        
-        .feedback-incorrect {
-            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            color: white;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-top: 1rem;
-            animation: slideUp 0.5s ease-out;
-        }
+
         
         .progress-bar {
             height: 8px;
@@ -1405,6 +1389,29 @@
             }
         }
     </style>
+    <style>
+        .feedback-msg-incorrect {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .feedback-msg-correct {
+            background-color: #ffffff !important;
+            color: #000000 !important;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease-out;
+            border: 1px solid #10b981;
+            box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.1), 0 2px 4px -1px rgba(16, 185, 129, 0.06);
+        }
+    </style>
     <script id="anydoc-subtitle-inject"
         src="chrome-extension://aopddeflghjljihihabdclejbojaomaf/public/subtitle/script/inject.js"></script>
 </head>
@@ -2250,10 +2257,11 @@
             if (isCorrect) {
                 score++;
                 feedbackMessage = `✅ 正确！你的表达很好！\n\n你说的："${userAnswer}"`;
-                document.getElementById('feedback-area').className = 'feedback-correct';
+                document.getElementById('feedback-area').className = 'feedback-msg-correct';
             } else {
-                feedbackMessage = `❌ 不太对，让我们看看正确的表达。\n\n你说的："${userAnswer}"\n\n最接近的正确表达："${bestMatch}"`;
-                document.getElementById('feedback-area').className = 'feedback-incorrect';
+                const formattedBestMatch = bestMatch.replace(/\*(.*?)\*/g, '<span class="font-bold" style="color: #ef4444;">$1</span>');
+                feedbackMessage = `❌ 不太对，让我们看看正确的表达。\n\n你说的："${userAnswer}"\n\n最接近的正确表达："${formattedBestMatch}"`;
+                document.getElementById('feedback-area').className = 'feedback-msg-incorrect';
             }
 
             document.getElementById('feedback-area').innerHTML = feedbackMessage.replace(/\n/g, '<br>');
@@ -2277,7 +2285,9 @@
             correctAnswers.forEach((answer, index) => {
                 const exampleDiv = document.createElement('div');
                 exampleDiv.className = 'sentence-example';
-                exampleDiv.innerHTML = `<strong>${index + 1}.</strong> ${answer}`;
+                let formattedAnswer = answer.replace(/\*(.*?)\*/g, '<span class="font-bold" style="color: #ef4444;">$1</span>');
+                formattedAnswer = formattedAnswer.replace(/\n/g, '<br>');
+                exampleDiv.innerHTML = `<strong>${index + 1}.</strong> ${formattedAnswer}`;
                 examplesContainer.appendChild(exampleDiv);
             });
 
